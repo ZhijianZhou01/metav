@@ -1,4 +1,4 @@
-# nextvirus: rapid identifing viral reads from high-throughput sequencing (illumina).
+# nextvirus: rapid identifing and classifying viral reads from high-throughput sequencing (illumina).
 
 ## 1. Download and install
 
