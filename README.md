@@ -38,7 +38,7 @@ The running of ```nextvirus``` relies on these softwares:
 
 (3) [diamond](https://github.com/bbuchfink/diamond) >= 2.0.9, the diamond is used to map reads or contigs to viral proteins.
 
-<b>Note</b>, (i) these dependencies need to be installed manually by users. (ii) KneadData and Trinity need to be added to environment variables of system (or user) beforehand, because nextvirus call them from the environment variables directly.
+<b>Note</b>, (i) these dependencies need to be installed manually by users. (ii) ```KneadData``` and ```Trinity``` need to be added to environment variables of system (or user) beforehand, because nextvirus call them from the environment variables directly.
 
 
 ## 3. Parameter configuration of dependent software
