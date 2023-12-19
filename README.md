@@ -36,7 +36,8 @@ The running of ```nextvirus``` relies on these softwares:
 
 <b>Note</b>, the test of nextvirus was completed on kneaddata v0.7.5. 
 
-(2) [Trinity](https://github.com/trinityrnaseq/trinityrnaseq), the Trinity is used to splice reads to contigs in the second sub-pipeline of nextvirus.
+(2) [Trinity](https://github.com/trinityrnaseq/trinityrnaseq), in the second sub-pipeline of nextvirus, the Trinity is used to splice reads to contigs.
 
+(3) [diamond](https://github.com/bbuchfink/diamond), the diamond is used to map reads or contigs to viral proteins.
 
-<b>Note</b>, these dependencies need to be installed and added to environment variables of system (or user) beforehand, because ervdetective call them from the environment variables directly.
+<b>Note</b>, these dependencies need to be installed. KneadData and Trinity need to be added to environment variables of system (or user) beforehand, because ervdetective call them from the environment variables directly.
