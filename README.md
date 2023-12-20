@@ -47,7 +47,7 @@ The running of ```nextvirus``` relies on these softwares:
 ## 3. Configuration of dependent software and database
 In order to manage the path and parameters of theses dependent software convenienty, the ```xml``` file is used to record the their configuration. In general, paths and parameters of software only need to be configured once in the first running, except for the host database used to filter contamination.
 
-### 3.1. using *.xml file
+### 3.1. about *.xml file
 The template (profiles.xml) of configuration is provided in the github repository, please note,
 
 + currently version of nextvirus only supports the processing of paired-end sequencing data from Illumina platform.
@@ -58,10 +58,19 @@ The template (profiles.xml) of configuration is provided in the github repositor
 
 
 ### 3.2. how to creat a host database?
-using [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml), for example,
- ```bowtie2-build /Human/human_hg38_refMrna.fna /Human/human_hg38_refMrna```.
-Then, the path ```/Human/human_hg38_refMrna``` is filled in file ```profiles.xml```. 
++ download the host's genomic with *.fasta format.
++ creat the host database using [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml), for example,
+ ```bowtie2-build /path/human_hg38_refMrna.fna /path/human_hg38_refMrna```.
+Then, the path ```/path/human_hg38_refMrna``` is filled in ```<database name="hostdb">``` section of file ```profiles.xml```. 
 
-### 3.2. how to creat viral nr database
-using [diamond](https://github.com/bbuchfink/diamond), for example,
+### 3.3. how to creat a viral nr database?
++ download the refseq sequence of viral nr from [NCBI](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
++ creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond), for example, 
+```diamond makedb -p 20 --in /path/protein.fasta --db /path/protein.dmnd```. Then, the path ```/path/to/protein.dmnd``` is filled in ```<database name="viral_nr">``` of file ```profiles.xml```. 
+
+### 3.4. how to creat a viral taxonomy?
+The viral taxonomy is used to classfy viral reads, we 
+
+
+
 
