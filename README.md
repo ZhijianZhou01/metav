@@ -45,7 +45,9 @@ The running of ```nextvirus``` relies on these softwares:
 
 
 ## 3. Configuration of dependent software and database
-In order to manage the path and parameters of theses dependent software convenienty, the ```xml``` file is used to record the their configuration. In general, paths and parameters of software only need to be configured once in the first running, except for the host database used to filter contamination.
+In order to manage the path and parameters of dependent softwares convenienty, the ```xml``` file is used to record their configuration. 
+
+In general, paths and parameters of software only need to be configured once in the first running, except for the host database used to filter contamination of host genome.
 
 ### 3.1. about *.xml file
 The template (profiles.xml) of configuration is provided in the github repository, please note,
