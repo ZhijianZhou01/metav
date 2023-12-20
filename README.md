@@ -80,4 +80,24 @@ The viral taxonomy information is used to classfy viral reads, this repository p
 
 ## 4. Getting help
 nextvirus is a command line interface program, users can get help documentation by entering ```nextvirus -h```  or ```nextvirus --help``` .
+| Parameter | Description |
+| --- | --- |
+|-h, --help | show this help message and exit|
+|-i1 LEFT | reads file(*.fq) using forward sequencing.|
+|-i2 RIGHT | reads file(*.fq) using reverse sequencing.|
+|-xml PROFILES | the xml file with parameters of dependent software and databases.|
+|-l LENGTH | the threshold of hit aa length used to filter the results of diamond, default: 10.|
+|-s IDENTITY | the threshold of hit aa identity(%) used to filter the results of diamond, default: 20.|
+|-e E_VALUE | three threshold of e-values are used to filter the sequence, default: 1e-6,1e-3,1e-1.|
+|-r1 | run the sub-pipeline1 (reads → viral nr).|
+|-r2 | run the sub-pipeline2 (reads → contigs → viral nr).|
+|-t THREAD | number of used threads, default: 1.|
+|-o OUTDIR | output directory to store all results.|
+
+
+
+
+
+
+
 
