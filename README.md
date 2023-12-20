@@ -108,7 +108,12 @@ nextvirus is a command line interface program, users can get help documentation 
 nextvirus -i1 reads_R1.fq -i2 reads_R2.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 ```
 
+<b> Tip </b>
++ nextvirus is also supported to run one of ```-r1``` and ```-r2``` alone.
 
++ if ```-r2``` is used, the output directory behind ```-o``` have to be absolute path.
+
++ if an error is displayed, check whether the parameters are entered correctly or XML file is correctly configured.
 
 
 
