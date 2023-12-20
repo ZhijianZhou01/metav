@@ -76,3 +76,8 @@ Then, the path ```/path/human_hg38_refMrna``` is filled in ```<database name="ho
 The viral taxonomy information is used to classfy viral reads, this repository provides the [species_information-2021-05-20.txt]() collected by ourselves. If you want to add information, please keep it in the same format.
 
 <b>Note, the viral taxonomy file generally does not need to be replaced in the short term.</b>
+
+
+## 4. Getting help
+nextvirus is a command line interface program, users can get help documentation by entering ```nextvirus -h```  or ```nextvirus --help``` .
+
