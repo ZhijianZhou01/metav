@@ -32,13 +32,15 @@ you can also directly run the source code of nextvirus without installation. Ple
 
 The running of ```nextvirus``` relies on these softwares:
 
-(1) [KneadData](https://github.com/biobakery/kneaddata), the KneadData pipeline is used to remove junction contamination and host contamination, and the step is implemented by [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) and [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) called by KneadData. <b>Note</b>, the test of nextvirus was completed on ```kneaddata v0.7.5```. 
+(1) [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) (version >=0.39), which is used to remove the contamination from adapter primer.
 
-(2) [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) >= v2.15.1, in the second sub-pipeline of nextvirus, the Trinity is used to splice reads to contigs.
+(2) [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) (version >=2.3.5), which is used to remove the contamination from host genome.
 
-(3) [diamond](https://github.com/bbuchfink/diamond) >= 2.0.9, the diamond is used to map reads or contigs to viral proteins.
+(3) [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) (version >=v2.15.1), in the second sub-pipeline of nextvirus, the Trinity is used to splice reads to contigs.
 
-<b>Note</b>, (i) these dependencies need to be installed manually by users. (ii) ```KneadData``` and ```Trinity``` need to be added to environment variables of system (or user) beforehand, because nextvirus call them from the environment variables directly.
+(3) [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads or contigs to viral proteins.
+
+<b>Note</b>, these dependencies need to be installed manually by users beforehand. 
 
 
 ## 3. Parameter configuration of dependent software
