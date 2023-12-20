@@ -11,7 +11,6 @@ nextvirus has been distributed to the standard library of ```PyPI```, and can be
 ```
 pip install nextvirus
 nextvirus -h
-
 ```
 
 ### 1.2. Or local installation
