@@ -1,5 +1,8 @@
 # nextvirus: rapid identifying and classifying viral reads from high-throughput sequencing (illumina).
 
+![](https://img.shields.io/badge/System-/Linux/MacOS-green.svg)
+![](https://img.shields.io/pypi/wheel/virusrecom)
+
 
 ## 1. Download and install
 
