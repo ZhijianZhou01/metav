@@ -1,5 +1,6 @@
 # nextvirus: rapid identifying and classifying viral reads from high-throughput sequencing (illumina).
 
+
 ## 1. Download and install
 
 nextvirus is developed via ```Python 3```, and you can get and install nextvirus in a variety of ways.
@@ -136,7 +137,7 @@ Below is an example, please note:
 
 </dependencies>
 
-<!--  note, the software and databases dependencies needs to be installed.  -->
+<!--  note, the software and databases dependencies needs to be installed manually in advance.  -->
 
 ```
 
