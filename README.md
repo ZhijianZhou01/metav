@@ -95,6 +95,12 @@ nextvirus is a command line interface program, users can get help documentation 
 |-o OUTDIR | output directory to store all results.|
 
 
+## 5. Example of usage
+
+```
+nextvirus -i1 reads_R1.fq -i2 reads_R2.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
+```
+
 
 
 
