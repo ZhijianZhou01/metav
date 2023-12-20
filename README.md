@@ -41,7 +41,7 @@ The running of ```nextvirus``` relies on these softwares:
 
 +  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads or contigs to viral proteins.
 
-<b>Note</b>, these dependencies need to be installed manually by users beforehand. 
+<b>Note</b>, these dependencies need to be installed manually by users beforehand. It is recommended that you specify the installation path when installing them.
 
 
 ## 3. Configuration of dependent software and database
