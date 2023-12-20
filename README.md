@@ -38,7 +38,7 @@ The running of ```nextvirus``` relies on these softwares:
 
 (3) [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) (version >=2.15.1), in the second sub-pipeline of nextvirus, the Trinity is used to splice reads to contigs.
 
-(3) [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads or contigs to viral proteins.
+(4) [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads or contigs to viral proteins.
 
 <b>Note</b>, these dependencies need to be installed manually by users beforehand. 
 
