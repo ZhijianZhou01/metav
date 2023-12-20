@@ -43,6 +43,6 @@ The running of ```nextvirus``` relies on these softwares:
 <b>Note</b>, these dependencies need to be installed manually by users beforehand. 
 
 
-## 3. Parameter configuration of dependent software
+## 3. Configuration of dependent software and database
 
 
