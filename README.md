@@ -62,7 +62,8 @@ The template (profiles.xml) of configuration is provided in the github repositor
 
 (2) creat the host database using [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml), for example,
  ```bowtie2-build /path/human_hg38_refMrna.fna /path/human_hg38_refMrna```.
-Then, the path ```/path/human_hg38_refMrna``` is filled in ```<database name="hostdb">``` section of file ```profiles.xml```. 
+
+(3) finally, the path ```/path/human_hg38_refMrna``` is filled in ```<database name="hostdb">``` section of file ```profiles.xml```. 
 
 <b>Note, different samples may come from different hosts, please adjust them in time.</b>
 
@@ -70,7 +71,9 @@ Then, the path ```/path/human_hg38_refMrna``` is filled in ```<database name="ho
 (1) download the refseq sequence of viral nr from [NCBI](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
 
 (2) creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond), for example, 
-```diamond makedb -p 10 --in /path/protein.fasta --db /path/protein.dmnd```. Then, the path ```/path/to/protein.dmnd``` is filled in ```<database name="viral_nr">``` of file ```profiles.xml```. 
+```diamond makedb -p 10 --in /path/protein.fasta --db /path/protein.dmnd```. 
+
+(3) finally, the path ```/path/to/protein.dmnd``` is filled in ```<database name="viral_nr">``` of file ```profiles.xml```. 
 
 <b>Note, the viral nr database generally does not need to be replaced in the short term.</b>
 
