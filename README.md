@@ -36,7 +36,7 @@ The running of ```nextvirus``` relies on these softwares:
 
 (2) [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) (version >=2.3.5), which is used to remove the contamination from host genome.
 
-(3) [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) (version >=v2.15.1), in the second sub-pipeline of nextvirus, the Trinity is used to splice reads to contigs.
+(3) [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) (version >=2.15.1), in the second sub-pipeline of nextvirus, the Trinity is used to splice reads to contigs.
 
 (3) [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads or contigs to viral proteins.
 
