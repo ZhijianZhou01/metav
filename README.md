@@ -69,5 +69,5 @@ Then, the path ```/path/human_hg38_refMrna``` is filled in ```<database name="ho
 ```diamond makedb -p 20 --in /path/protein.fasta --db /path/protein.dmnd```. Then, the path ```/path/to/protein.dmnd``` is filled in ```<database name="viral_nr">``` of file ```profiles.xml```. 
 
 ### 3.4. how to creat a viral taxonomy?
-The viral taxonomy information is used to classfy viral reads, this repository provides the [species_information-2021-05-20.txt]() organized by ourselves. If you want to add information, keep it in the same format.
+The viral taxonomy information is used to classfy viral reads, this repository provides the [species_information-2021-05-20.txt]() collected by ourselves. If you want to add information, please keep it in the same format.
 
