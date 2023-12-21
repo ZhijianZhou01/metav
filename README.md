@@ -55,7 +55,7 @@ In general, paths and parameters of software only need to be configured once in 
 ### 3.1. about profiles.xml
 the template of profiles.xml is provided in the github repository, please note,
 
-+ currently version of nextvirus only supports Illumina platform.
++ currently version of nextvirus only supports the sequencing data from Illumina platform.
   
 + the paths of these software and databases need to be adjusted with reference to your computer. 
   
