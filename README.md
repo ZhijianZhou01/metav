@@ -59,7 +59,7 @@ the template of profiles.xml is provided in the github repository, please note,
   
 + the paths of these software and databases need to be adjusted with reference to your computer. 
   
-+ the parameters of software in this profiles.xml.xml file generally does not need to be modified because they are suitable.
++ the parameters of software in this profiles.xml file generally does not need to be modified because they are suitable.
 
 
 ### 3.2. how to creat a host database?
