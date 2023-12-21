@@ -48,18 +48,18 @@ The running of ```nextvirus``` relies on these softwares:
 
 
 ## 3. Configuration of dependent software and database
-In order to manage the path and parameters of dependent softwares convenienty, the ```xml``` file is used to record their configuration. 
+In order to manage the path and parameters of dependent softwares convenienty, the ```profiles.xml``` file is used to record their configuration. 
 
 In general, paths and parameters of software only need to be configured once in the first running, except for the host database used to filter contamination of host genome.
 
-### 3.1. about *.xml file
-The template (profiles.xml) of configuration is provided in the github repository, please note,
+### 3.1. about profiles.xml
+the template of profiles.xml is provided in the github repository, please note,
 
-+ currently version of nextvirus only supports the processing of paired-end sequencing data from Illumina platform.
++ currently version of nextvirus only supports Illumina platform.
   
 + the paths of these software and databases need to be adjusted with reference to your computer. 
   
-+ the parameters of software in this *.xml file generally does not need to be modified because they are suitable.
++ the parameters of software in this profiles.xml.xml file generally does not need to be modified because they are suitable.
 
 
 ### 3.2. how to creat a host database?
