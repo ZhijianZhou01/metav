@@ -55,7 +55,7 @@ In general, paths and parameters of software only need to be configured once in 
 ### 3.1. about profiles.xml
 the template of profiles.xml is provided in the github repository, please note,
 
-+ currently version of nextvirus only supports the sequencing data from Illumina platform.
++ currently version of nextvirus only supports the sequenced data from Illumina platform.
   
 + the paths of these software and databases need to be adjusted with reference to your computer. 
   
@@ -70,7 +70,7 @@ the template of profiles.xml is provided in the github repository, please note,
 
 (3) finally, fill the path ```/home/zzj/host_genome```  into ```<database name="hostdb">``` section of file ```profiles.xml```. 
 
-(4) nextvirus supports multiplehost database, please use ```,``` to separate them, for example ```/home/zzj/host_genome1, /home/zzj/host_genome2```.
+(4) nextvirus supports multiplehost databases, please use ```,``` to separate them, for example ```/home/zzj/host_genome1, /home/zzj/host_genome2```.
 
 <b>Tip</b>, different samples may come from different hosts, please adjust them in profiles.xml in time.
 
