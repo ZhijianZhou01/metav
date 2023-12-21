@@ -66,26 +66,30 @@ The template (profiles.xml) of configuration is provided in the github repositor
 (1) download the host's genomic with *.fasta format.
 
 (2) creat the host database using [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml), for example,
- ```bowtie2-build /path/human_hg38_refMrna.fna /path/human_hg38_refMrna```.
+ ```bowtie2-build /home/zzj/host_genome.fna /home/zzj/host_genome```.
 
-(3) finally, fill the path ```/path/human_hg38_refMrna```  into ```<database name="hostdb">``` section of file ```profiles.xml```. 
+(3) finally, fill the path ```/home/zzj/host_genome```  into ```<database name="hostdb">``` section of file ```profiles.xml```. 
 
-<b>Note, different samples may come from different hosts, please adjust them in time.</b>
+(4) nextvirus supports multiplehost database, please use ```,``` to separate them, for example ```/home/zzj/host_genome1, /home/zzj/host_genome2```.
+
+<b>Tip</b>, different samples may come from different hosts, please adjust them in profiles.xml in time.
 
 ### 3.3. how to creat a viral nr database?
 (1) download the refseq sequence of viral nr from [NCBI](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
 
 (2) creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond), for example, 
-```diamond makedb -p 10 --in /path/protein.fasta --db /path/protein.dmnd```. 
+```diamond makedb -p 10 --in /home/zzj/nr/protein.fasta --db /home/zzj/nr/protein.dmnd```. 
 
-(3) finally, fill the path ```/path/protein.dmnd```  into ```<database name="viral_nr">``` section of file ```profiles.xml```. 
+(3) finally, fill the path ```/home/zzj/nr/protein.dmnd```  into ```<database name="viral_nr">``` section of file ```profiles.xml```. 
 
-<b>Note, the viral nr database generally does not need to be replaced in the short term.</b>
+
+<b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
 
 ### 3.4. how to creat a viral taxonomy?
-The viral taxonomy information is used to classfy viral reads, this repository provides the [species_information-2021-05-20.txt]() collected by ourselves. If you want to add information, please keep it in the same format.
+The viral taxonomy information is used to classfy viral reads, this repository provides the [taxonomy_information_2021-05-20.txt]() made by ourselves. If you want to add some information, please keep it in the same format. 
+<b>Note</b>, the accession of protein needs to be consistent with viral nr database in the section 3.3.
 
-<b>Note, the viral taxonomy file generally does not need to be replaced in the short term.</b>
+<b>Tip</b>, the viral taxonomy file generally does not need to be replaced in the short term.
 
 
 ## 4. Getting help
