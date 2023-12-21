@@ -93,12 +93,16 @@ nextvirus is a command line interface program, users can get help documentation 
 | Parameter | Description |
 | --- | --- |
 |-h, --help | show this help message and exit|
-|-i1 LEFT | reads file(*.fq) using forward sequencing.|
-|-i2 RIGHT | reads file(*.fq) using reverse sequencing.|
-|-xml PROFILES | the xml file with parameters of dependent software and databases.|
-|-l LENGTH | the threshold of hit aa length used to filter the results of diamond, default: 10.|
-|-s IDENTITY | the threshold of hit aa identity(%) used to filter the results of diamond, default: 20.|
-|-e E_VALUE | three threshold of e-values are used to filter the sequence, default: 1e-6,1e-3,1e-1.|
+|-pe | paired-end sequencing.|
+|-se | single-end sequencing.|
+|-i1 FORWARD | forward reads(*.fq) using paired-end sequencing.|
+|-i2 REVERSE | reverse reads(*.fq) using paired-end sequencing.|
+|-u UNPAIRED | reads file using single-end sequencing (unpaired reads).|
+|-q QUALITIES | the qualities(phred33 or phred64) of sequenced reads, default: phred33.|
+|-xml PROFILES | the *.xml file with parameters of dependent software and databases.|
+|-len LENGTH | threshold of length of aa alignment in diamond, default: 10.|
+|-s IDENTITY | threshold of identity(%) of alignment aa in diamond, default: 20.|
+|-e E_VALUE | specify three e-values threshold used to filter the output of diamond, default: 1e-6,1e-3,1e-1.|
 |-r1 | run the sub-pipeline1 (reads → viral nr).|
 |-r2 | run the sub-pipeline2 (reads → contigs → viral nr).|
 |-t THREAD | number of used threads, default: 1.|
@@ -107,8 +111,17 @@ nextvirus is a command line interface program, users can get help documentation 
 
 ## 5. Example of usage
 
+
++ if paired-end sequencing:
+  
 ```
-nextvirus -i1 reads_R1.fq -i2 reads_R2.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
+nextvirus -pe -i1 reads_R1.fq -i2 reads_R2.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
+```
+
++ if single-end sequencing:
+ 
+ ```
+nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 ```
 
 <b> Tip </b>
@@ -121,8 +134,8 @@ nextvirus -i1 reads_R1.fq -i2 reads_R2.fq -xml profiles.xml -r1 -r2 -t 8 -o outd
 
 ## 6. Output results
 + ```input-parameter.txt```, the used parameter of nextvirus in command-line interface.
-+ directory ```pipeline1```, the output of sub-pipeline1 (reads → viral nr) which contains intermediate results and ```finally_result```.
-+ 
++ directory ```pipeline1```, which contains intermediate results and ```finally_result``` from sub-pipeline1(reads → viral nr).
++ directory ```pipeline2```, which contains intermediate results and ```finally_result``` from sub-pipeline2(reads → contigs → viral nr).
 
 
 
