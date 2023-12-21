@@ -129,7 +129,7 @@ nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 ```
 
 <b> Tip </b>
-+ nextvirus is also supported to run one of ```-r1``` and ```-r2``` alone.
++ nextvirus is also supported to run one of ```-r1``` and ```-r2```.
 
 + if ```-r2``` is used, the output directory behind ```-o``` have to be <b>absolute path</b>.
 
