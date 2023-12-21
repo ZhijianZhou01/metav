@@ -78,7 +78,7 @@ The template (profiles.xml) of configuration is provided in the github repositor
 (2) creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond), for example, 
 ```diamond makedb -p 10 --in /path/protein.fasta --db /path/protein.dmnd```. 
 
-(3) finally, fill the path ```/path/to/protein.dmnd```  into ```<database name="viral_nr">``` section of file ```profiles.xml```. 
+(3) finally, fill the path ```/path/protein.dmnd```  into ```<database name="viral_nr">``` section of file ```profiles.xml```. 
 
 <b>Note, the viral nr database generally does not need to be replaced in the short term.</b>
 
