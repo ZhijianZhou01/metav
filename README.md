@@ -133,7 +133,7 @@ nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 
 + if ```-r2``` is used, the output directory behind ```-o``` have to be <b>absolute path</b>.
 
-+ if an error is displayed, check whether the parameters are entered correctly or XML file is correctly configured.
++ if an error is displayed, please check the input parameters and XML file.
 
 
 ## 6. Output results
