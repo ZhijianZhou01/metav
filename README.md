@@ -70,7 +70,7 @@ the template of profiles.xml is provided in the github repository, please note,
 
 (3) finally, fill the path ```/home/zzj/host_genome```  into ```<database name="hostdb">``` section of file ```profiles.xml```. 
 
-(4) nextvirus supports multiplehost databases, please use ```,``` to separate them, for example ```/home/zzj/host_genome1, /home/zzj/host_genome2```.
+(4) nextvirus supports multiplehost databases, please use ```,``` to separate these path, for example ```/home/zzj/host_genome1, /home/zzj/host_genome2```.
 
 <b>Tip</b>, different samples may come from different hosts, please adjust them in profiles.xml in time.
 
