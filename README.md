@@ -116,13 +116,13 @@ nextvirus is a command line interface program, users can get help documentation 
 ## 5. Example of usage
 
 
-+ if paired-end sequencing:
++ <b>if paired-end sequencing:</b>
   
 ```
 nextvirus -pe -i1 reads_R1.fq -i2 reads_R2.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 ```
 
-+ if single-end sequencing:
++ <b>if single-end sequencing:</b>
  
  ```
 nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
