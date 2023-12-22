@@ -139,7 +139,8 @@ nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 ## 6. Output results
 + file ```input-parameter.txt```, which contains the used parameters of nextvirus in command-line interface.
 + directory ```pipeline1```, which contains intermediate results and ```finally_result``` from sub-pipeline1.
-xxxxxxxxx
+  
+
 
   
 + directory ```pipeline2```, which contains intermediate results and ```finally_result``` from sub-pipeline2.
