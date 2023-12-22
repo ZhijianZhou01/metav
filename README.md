@@ -75,7 +75,7 @@ the template of profiles.xml is provided in the github repository, please note,
 <b>Tip</b>, different samples may come from different hosts, please adjust them in profiles.xml in time.
 
 ### 3.3. how to prepare a viral nr database?
-(1) download the refseq sequence of viral nr from [NCBI](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
+(1) download the refseq amino acid sequence of viral nr from [NCBI Refseq](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
 
 (2) creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond), for example, 
 ```diamond makedb -p 10 --in /home/zzj/nr/protein.fasta --db /home/zzj/nr/protein.dmnd```. 
