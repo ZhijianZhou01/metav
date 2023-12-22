@@ -1,4 +1,4 @@
-# nextvirus: rapid identifying and classifying viruses from high-throughput sequencing reads (illumina).
+# nextvirus: rapid identifying and classifying viruses from next-generation sequencing (illumina).
 
 ![](https://img.shields.io/badge/System-Linux-green.svg)
 ![](https://img.shields.io/pypi/wheel/virusrecom)
