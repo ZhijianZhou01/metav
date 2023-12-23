@@ -212,4 +212,5 @@ The two sub-pipelines (the prototype of nextvirus) are used as the first recogni
 
 ## 9. Bug report
 nextvirus was test on Ubuntu 16.04 and Ubuntu 20.02, which can work well. If you run into a problem or find a bug, please contact us.
+
 [Github issues](https://github.com/ZhijianZhou01/BioAider/issues) or send email to zjzhou@hnu.edu.cn.
