@@ -203,8 +203,9 @@ The meanings of directory name with e-value in `pipeline2` are as follows,
 |lower_0.001 | `1e-6` < e-value of hit contigs < `1e-3` |
 |lower_0.1 | `1e-3` < e-value of hit contigs < `1e-1` |
 
-In the directory `hit_summary` of each sub-directory with e-value, the hit contig sequence and summary files are provided.
+In the directory `hit_summary` of each sub-directory with e-value, the sequences and summary information of hit contigs are provided.
 
+![https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/contigs_symmary.png](https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/contigs_symmary.png)
 
 
 
