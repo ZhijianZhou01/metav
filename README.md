@@ -114,14 +114,13 @@ Users can view the help documentation by entering `nextvirus -h`  or `nextvirus 
 |-len LENGTH | threshold of length of aa alignment in diamond, default: 10.|
 |-s IDENTITY | threshold of identity(%) of alignment aa in diamond, default: 20.|
 |-e E_VALUE | specify three e-values threshold used to filter the output of diamond, default: 1e-6,1e-3,1e-1.|
-|-r1 | run the sub-pipeline1 (reads → viral nr).|
-|-r2 | run the sub-pipeline2 (reads → contigs → viral nr).|
+|-r1 | run the sub-pipeline 1 (reads → viral nr).|
+|-r2 | run the sub-pipeline 2 (reads → contigs → viral nr).|
 |-t THREAD | number of used threads, default: 1.|
 |-o OUTDIR | output directory to store all results.|
 
 
 ## 6. Example of usage
-
 
 + <b>if reads are from paired-end sequencing:</b>
   
@@ -144,14 +143,13 @@ nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 
 
 ## 7. Output results
-+ file `input-parameter.txt`, which contains the used parameters of nextvirus in command-line interface.
-+ directory `pipeline1`, which contains intermediate results and `finally_result` from sub-pipeline1.
-  
+
+### sub-pipeline 1
+the directory `pipeline1` contains intermediate results and `finally_result` from sub-pipeline 1.
 
 
-  
-+ directory `pipeline2`, which contains intermediate results and `finally_result` from sub-pipeline2.
-
+### sub-pipeline 2
+the directory `pipeline2` contains intermediate results and `finally_result` from sub-pipeline 2.
 
 
 
