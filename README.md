@@ -40,37 +40,31 @@ The running of `nextvirus` relies on these softwares:
 
 +  [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) (version >=2.3.5), which is used to remove the contamination from host genome.
   
-+  [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) (version >=2.15.1), in the second sub-pipeline of nextvirus, the Trinity is used to splice reads to contigs.
-  
-<b>Note</b>, the running of Trinity relies on [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml), [jellyfish](https://github.com/gmarcais/Jellyfish/releases), [samtools](https://github.com/samtools/samtools/releases) and [salmon](https://github.com/COMBINE-lab/salmon/releases/tag/v1.10.1), and they can be easily installed,
++  [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) (version >=2.15.1), in the second sub-pipeline of `nextvirus`, the Trinity is used to splice reads to contigs. <b>Note</b>, the running of Trinity relies on [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml), [jellyfish](https://github.com/gmarcais/Jellyfish/releases), [samtools](https://github.com/samtools/samtools/releases) and [salmon](https://github.com/COMBINE-lab/salmon/releases/tag/v1.10.1), and they can be easily installed,
 ```
 sudo apt-get install bowtie2
-
 sudo apt-get install jellyfish
-
 sudo apt install samtools
-
 sudo apt install salmon
 ```
 
 +  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads or contigs to viral proteins.
 
-<b>Note</b>, these dependencies need to be installed manually by users beforehand. It is recommended that you specify the installation path when installing them.
-
+<b>Note</b>, these dependencies need to be installed manually by users beforehand and be added to `PATH` (system or user). 
 
 ## 3. Configuration of dependent software and database
-In order to manage the path and parameters of dependent softwares convenienty, the `profiles.xml` file is used to record their configuration. 
+In order to manage the parameters of dependent softwares and databases convenienty, the `profiles.xml` file is used to record their configuration. 
 
-In general, paths and parameters of software only need to be configured once in the first running, except for the host database used to filter contamination of host genome.
+In general, these parameters need to be configured once in the first running, except for the host database used to filter contamination of host genome.
 
 ### 3.1. about profiles.xml
 the template of profiles.xml is provided in the github repository, please note,
 
 + currently version of nextvirus only supports the sequenced data from Illumina platform.
   
-+ the paths of these software and databases need to be adjusted with reference to your computer. 
++ the paths of these databases in profiles.xml need to be adjusted with reference to your computer. 
   
-+ the parameters of software in this profiles.xml file generally does not need to be modified because they are suitable.
++ the parameters of software in profiles.xml generally does not need to be modified because they are suitable.
 
 
 ### 3.2. how to prepare a host database?
