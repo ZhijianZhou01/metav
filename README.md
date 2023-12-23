@@ -100,7 +100,7 @@ the template of profiles.xml is provided in the github repository, please note,
 
 
 ## 5. Getting help
-nextvirus is a command-line-interface program, users can view the help documentation by entering `nextvirus -h`  or `nextvirus --help` .
+Users can view the help documentation by entering `nextvirus -h`  or `nextvirus --help` .
 | Parameter | Description |
 | --- | --- |
 |-h, --help | show this help message and exit|
