@@ -173,7 +173,7 @@ the directory `pipeline1` contains intermediate results and `finally_result` fro
 In the example, three thresholds (`1e-6`, `1e-3` and `1e-1`) of e-value are used to filter the output diamond program. Thus, three corresponding sub-directories is created and used to store results. 
 ![https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/e-value.png](https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/e-value.png)
 
-The meanings of directory name are as follows,
+The meanings of directory name with e-value in `pipeline1` are as follows,
 
 | sub-directories | description |
 | --- | --- |
