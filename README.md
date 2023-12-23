@@ -168,7 +168,7 @@ outdir:	/home/zzj/datas/test/out6
 ```
 
 ### 7.2. directory pipeline1
-the directory `pipeline1` contains intermediate results and `finally_result` from sub-pipeline 1.
+the directory `pipeline1` contains intermediate results and `finally_result` from `sub-pipeline 1` (reads → viral nr). 
 
 In the example, three thresholds (`1e-6`, `1e-3` and `1e-1`) of e-value are used to filter the output diamond program. Thus, three corresponding sub-directories is created and used to store results. 
 ![https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/e-value.png](https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/e-value.png)
@@ -177,11 +177,11 @@ The meanings of directory name are as follows,
 
 | sub-directories | description |
 | --- | --- |
-|lower_1e-6 | e-value of reads < `1e-6` |
-|lower_0.001 | `1e-6` < e-value of reads < `1e-3` |
-|lower_0.1 | `1e-3` < e-value of reads < `1e-1` |
+|lower_1e-6 | e-value of hit reads < `1e-6` |
+|lower_0.001 | `1e-6` < e-value of hit reads < `1e-3` |
+|lower_0.1 | `1e-3` < e-value of hit reads < `1e-1` |
 
-The hierarchy is same in all three subdirectories with e-value. For example, in the directory `hit_summary` of the directory `lower_1e-6`, nextvirus provides a summary file (`hit_reads_taxonomy_information.txt`) with taxonomy information. 
+The hierarchy is same in all three sub-directories with e-value. For example, in the directory `hit_summary` of the directory `lower_1e-6`, nextvirus provides a summary file (`hit_reads_taxonomy_information.txt`) with taxonomy information. 
 
 What's more, nextvirus counts the hit reads according to `order`, `family` and `strain`(organism) and provides three `*.csv` summary files.
 
@@ -191,7 +191,20 @@ What's more, nextvirus counts the hit reads according to `order`, `family` and `
 
 
 ### 7.3. directory pipeline2
-the directory `pipeline2` contains intermediate results and `finally_result` from sub-pipeline 2.
+the directory `pipeline2` contains intermediate results and `finally_result` from `sub-pipeline 2` (reads → contigs → viral nr). The hierarchy of the directory of output results is the same as directory `pipeline1`.
+
+However, the output in directory `finally_result` of the directory `pipeline2` are hit contigs, not reads.
+
+The meanings of directory name with e-value in `pipeline2` are as follows,
+
+| sub-directories | description |
+| --- | --- |
+|lower_1e-6 | e-value of hit contigs < `1e-6` |
+|lower_0.001 | `1e-6` < e-value of hit contigs < `1e-3` |
+|lower_0.1 | `1e-3` < e-value of hit contigs < `1e-1` |
+
+In the directory `hit_summary` of each sub-directory with e-value, the hit contig sequence and summary files are provided.
+
 
 
 
