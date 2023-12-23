@@ -77,7 +77,7 @@ The viral nr database was used to identity viral components from sequenced reads
 
 <b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
 
-### 3.3. viral taxonomy
+### 3.3. viral taxonomy information
 
 The viral taxonomy information is used to classfy viral reads, this repository provides the [taxonomy_information_2021-05-20.txt]() made by ourselves. If you want to add some information, please keep it in the same format. 
 <b>Note</b>, the accession of protein needs to be consistent with viral nr database in the `section 3.2`.
