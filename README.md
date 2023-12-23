@@ -187,7 +187,7 @@ What's more, nextvirus counts these hit reads according to `order`, `family` and
 
 ![https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/reads_summary.png](https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/reads_summary.png)
 
-<b>In particular, nextvirus extract all hit reads sequences (*fasta format) according to the hierarchical relationship of `order`, `family` and `strain`(organism)</b>. These hit reads sequences are stored in directory `reads_out`.
+<b>In particular, nextvirus extract all hit reads sequences (*fasta format) according to the hierarchical relationship of `order`, `family` and `strain`(organism)</b>. These hit reads sequences are stored in directory `hit_reads_seq`.
 
 
 ### 7.3. directory pipeline2
@@ -203,7 +203,7 @@ The meanings of directory name with e-value in `pipeline2` are as follows,
 |lower_0.001 | `1e-6` < e-value of hit contigs < `1e-3` |
 |lower_0.1 | `1e-3` < e-value of hit contigs < `1e-1` |
 
-In the directory `hit_summary` of each sub-directory with e-value, the sequences and summary information of hit contigs are provided, and these hit contigs sequences are stored in directory `contig_out`.
+In the directory `hit_summary` of each sub-directory with e-value, the sequences and summary information of hit contigs are provided, and these hit contigs sequences are stored in directory `hit_contigs_seq`.
 
 ![https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/contigs_symmary.png](https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/contigs_symmary.png)
 
