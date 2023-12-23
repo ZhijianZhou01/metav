@@ -48,7 +48,7 @@ sudo apt install samtools
 sudo apt install salmon
 ```
 
-+  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads or contigs to viral proteins.
++  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads (or contigs) to viral proteins.
 
 <b>Note, these softwares need to be installed manually by users in advance and be added to `PATH` (system or user)</b>. 
 
