@@ -50,55 +50,57 @@ sudo apt install salmon
 
 +  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads or contigs to viral proteins.
 
-<b>Note</b>, these dependencies need to be installed manually by users beforehand and be added to `PATH` (system or user). 
+<b>Note, these softwares need to be installed manually by users in advance and be added to `PATH` (system or user)</b>. 
 
-## 3. Configuration of dependent software and database
+##  3. Database dependencies
+### 3.1. host database
+
+The host database is used to remove contamination from host genome. <b>How to prepare a host database?</b>
+
+(1) download the genomic data of host with *.fasta format.
+
+(2) creat the host database using [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) software, for example,
+ `bowtie2-build /home/zzj/host_genome.fna /home/zzj/host_genome`.
+
+(3) nextvirus also supports multiplehost databases, please use `,` to separate these path, for example `/home/zzj/host_genome1, /home/zzj/host_genome2`.
+
+<b>Tip</b>, different samples may come from different hosts, please adjust them in profiles.xml in time.
+
+### 3.2. viral nr database
+
+The viral nr database was used to identity viral components from sequenced reads. <b>How to prepare a viral nr database?</b>
+
+(1) download the refseq of viral protein (amino acid) from [ncbi refseq database](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
+
+(2) creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond) software, for example, 
+`diamond makedb -p 10 --in /home/zzj/nr/protein.fasta --db /home/zzj/nr/protein.dmnd`. 
+
+<b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
+
+### 3.3. viral taxonomy
+
+The viral taxonomy information is used to classfy viral reads, this repository provides the [taxonomy_information_2021-05-20.txt]() made by ourselves. If you want to add some information, please keep it in the same format. 
+<b>Note</b>, the accession of protein needs to be consistent with viral nr database in the `section 3.2`.
+
+<b>Tip</b>, the viral taxonomy file generally does not need to be replaced in the short term.
+
+
+## 4. Configuration of dependencies
 In order to manage the parameters of dependent softwares and databases convenienty, the `profiles.xml` file is used to record their configuration. 
 
-In general, these parameters need to be configured once in the first running, except for the host database used to filter contamination of host genome.
-
-### 3.1. about profiles.xml
 the template of profiles.xml is provided in the github repository, please note,
 
 + currently version of nextvirus only supports the sequenced data from Illumina platform.
   
 + the paths of these databases in profiles.xml need to be adjusted with reference to your computer. 
   
-+ the parameters of software in profiles.xml generally does not need to be modified because they are suitable.
++ the parameters of software in profiles.xml generally does not need to be modified because they are suitable in most cases.
+
+<b>Tip</b>, in general, these parameters only need to be configured once in the first running, except for the host database used to filter contamination of host genome.
 
 
-### 3.2. how to prepare a host database?
-(1) download the genomic data of host with *.fasta format.
-
-(2) creat the host database using [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) software, for example,
- `bowtie2-build /home/zzj/host_genome.fna /home/zzj/host_genome`.
-
-(3) finally, fill the path `/home/zzj/host_genome`  into `<database name="hostdb">` section of file `profiles.xml`. 
-
-(4) nextvirus also supports multiplehost databases, please use `,` to separate these path, for example `/home/zzj/host_genome1, /home/zzj/host_genome2`.
-
-<b>Tip</b>, different samples may come from different hosts, please adjust them in profiles.xml in time.
-
-### 3.3. how to prepare a viral nr database?
-(1) download the refseq of viral protein (amino acid) from [ncbi refseq database](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
-
-(2) creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond) software, for example, 
-`diamond makedb -p 10 --in /home/zzj/nr/protein.fasta --db /home/zzj/nr/protein.dmnd`. 
-
-(3) finally, fill the path `/home/zzj/nr/protein.dmnd`  into `<database name="viral_nr">` section of file `profiles.xml`. 
-
-
-<b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
-
-### 3.4. how to prepare a viral taxonomy?
-The viral taxonomy information is used to classfy viral reads, this repository provides the [taxonomy_information_2021-05-20.txt]() made by ourselves. If you want to add some information, please keep it in the same format. 
-<b>Note</b>, the accession of protein needs to be consistent with viral nr database in the section 3.3.
-
-<b>Tip</b>, the viral taxonomy file generally does not need to be replaced in the short term.
-
-
-## 4. Getting help
-nextvirus is a command line interface program, users can get help documentation by entering `nextvirus -h`  or `nextvirus --help` .
+## 5. Getting help
+nextvirus is a command-line-interface program, users can view the help documentation by entering `nextvirus -h`  or `nextvirus --help` .
 | Parameter | Description |
 | --- | --- |
 |-h, --help | show this help message and exit|
@@ -118,7 +120,7 @@ nextvirus is a command line interface program, users can get help documentation 
 |-o OUTDIR | output directory to store all results.|
 
 
-## 5. Example of usage
+## 6. Example of usage
 
 
 + <b>if reads are from paired-end sequencing:</b>
@@ -141,7 +143,7 @@ nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 + if an error is displayed, please check the input parameters and XML file.
 
 
-## 6. Output results
+## 7. Output results
 + file `input-parameter.txt`, which contains the used parameters of nextvirus in command-line interface.
 + directory `pipeline1`, which contains intermediate results and `finally_result` from sub-pipeline1.
   
