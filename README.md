@@ -143,9 +143,10 @@ nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 
 
 ## 7. Output results
-### 7.1. the used parameters in command-line interface
 
-provide an output file recorded the input parameters
+### 7.1. input-parameter.txt
+
+the output file `input-parameter.txt` recorded the input parameters in command-line interface.
 
 ```
 the used parameters of nextvirus in command-line interface.
@@ -166,11 +167,30 @@ thread:	8
 outdir:	/home/zzj/datas/test/out6
 ```
 
-### 7.1. sub-pipeline 1
+### 7.2. directory pipeline1
 the directory `pipeline1` contains intermediate results and `finally_result` from sub-pipeline 1.
 
+In the example, three thresholds (`1e-6`, `1e-3` and `1e-1`) of e-value are used to filter the output diamond program. Thus, three corresponding sub-directories is created and used to store results. 
+![https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/e-value.png](https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/e-value.png)
 
-### 7.2. sub-pipeline 2
+The meanings of directory name are as follows,
+
+| sub-directories | description |
+| --- | --- |
+|lower_1e-6 | e-value of reads < `1e-6` |
+|lower_0.001 | `1e-6` < e-value of reads < `1e-3` |
+|lower_0.1 | `1e-3` < e-value of reads < `1e-1` |
+
+The hierarchy is same in all three subdirectories with e-value. For example, in the directory `hit_summary` of the directory `lower_1e-6`, nextvirus provides a summary file (`hit_reads_taxonomy_information.txt`) with taxonomy information. 
+
+What's more, nextvirus counts the hit reads according to `order`, `family` and `strain`(organism) and provides three `*.csv` summary files.
+
+![https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/reads_summary.png](https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/reads_summary.png)
+
+<b>In particular, nextvirus extract all hit reads sequences (*fasta format) according to the hierarchical relationship of `order`, `family` and `strain`(organism)</b>. These reads sequences are stored in directory `reads_out`.
+
+
+### 7.3. directory pipeline2
 the directory `pipeline2` contains intermediate results and `finally_result` from sub-pipeline 2.
 
 
