@@ -148,14 +148,14 @@ nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 provide an output file recorded the input parameters
 
 ```
-the used parameter of nextvirus in command-line interface.
+the used parameters of nextvirus in command-line interface.
 
 pair_end:	True
 single_end:	False
 sub-pipeline 1:	True
 sub-pipeline 2:	True
-forward_reads:	/home/zzj/datas/test/wugang_cattle_1.fq
-reverse_reads:	/home/zzj/datas/test/wugang_cattle_2.fq
+forward_reads:	/home/zzj/datas/test/reads_1.fq
+reverse_reads:	/home/zzj/datas/test/reads_2.fq
 unpaired:	None
 qualities:	phred33
 set_file:	/home/zzj/datas/test/profiles.xml
