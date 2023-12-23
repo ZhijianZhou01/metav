@@ -207,6 +207,11 @@ In the directory `hit_summary` of each sub-directory with e-value, the sequences
 
 ![https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/contigs_symmary.png](https://github.com/ZhijianZhou01/nextvirus/blob/main/figure/contigs_symmary.png)
 
+## 8. Apply
+The two sub-pipelines (the prototype of nextvirus) are used as the first recognition in our viral detection. In order to reduce false positives and false negatives, in the last three years, we continuously optimize the architecture of nextvirus based on subsequent PCR amplification. Luckily, nextvirus facilitated our discovery of viruses, and some findings with help of nextvirus have already been published. 
 
-## 8. Performance testing
 
+
+## 9. Bug report
+nextvirus was test on Ubuntu 16.04 and Ubuntu 20.02, which can work well. If you run into a problem or find a bug, please contact us.
+[Github issues](https://github.com/ZhijianZhou01/BioAider/issues) or send email to zjzhou@hnu.edu.cn.
