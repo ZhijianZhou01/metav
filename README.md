@@ -144,11 +144,11 @@ nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 
 ## 7. Output results
 
-### sub-pipeline 1
+### 7.1. sub-pipeline 1
 the directory `pipeline1` contains intermediate results and `finally_result` from sub-pipeline 1.
 
 
-### sub-pipeline 2
+### 7.2. sub-pipeline 2
 the directory `pipeline2` contains intermediate results and `finally_result` from sub-pipeline 2.
 
 
