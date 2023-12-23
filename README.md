@@ -143,6 +143,28 @@ nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 
 
 ## 7. Output results
+### 7.1. the used parameters in command-line interface
+
+provide an output file recorded the input parameters
+
+```
+the used parameter of nextvirus in command-line interface.
+
+pair_end:	True
+single_end:	False
+sub-pipeline 1:	True
+sub-pipeline 2:	True
+forward_reads:	/home/zzj/datas/test/wugang_cattle_1.fq
+reverse_reads:	/home/zzj/datas/test/wugang_cattle_2.fq
+unpaired:	None
+qualities:	phred33
+set_file:	/home/zzj/datas/test/profiles.xml
+length_threshold:	10.0
+identity_threshold:	20.0
+e-value:	['1e-6', '1e-3', '1e-1']
+thread:	8
+outdir:	/home/zzj/datas/test/out6
+```
 
 ### 7.1. sub-pipeline 1
 the directory `pipeline1` contains intermediate results and `finally_result` from sub-pipeline 1.
