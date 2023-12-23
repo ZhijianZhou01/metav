@@ -6,11 +6,11 @@
 
 ## 1. Download and install
 
-nextvirus is a command-line-interface program, which developed via ```Python 3```, and you can get and install nextvirus in a variety of ways.
+nextvirus is a command-line-interface program, which developed via `Python 3`, and you can get and install nextvirus in a variety of ways.
 
 ### 1.1. pip method
 
-nextvirus has been distributed to the standard library of ```PyPI```, and can be easily installed by the tool ```pip```.
+nextvirus has been distributed to the standard library of `PyPI`, and can be easily installed by the tool `pip`.
 
 ```
 pip install nextvirus
@@ -19,28 +19,39 @@ nextvirus -h
 
 ### 1.2. Or local installation
 
-In addition to the  ```pip``` method, you can also install nextvirus manually using the file ```setup.py```. 
+In addition to the  `pip` method, you can also install nextvirus manually using the file `setup.py`. 
 
 Firstly, download this repository, then, run:
-```xml
+```
 python setup.py install
 nextvirus -h
 ```
 
 ### 1.3. Or run the source code directly
 
-you can also directly run the source code of nextvirus without installation. Please view the help documentation by ```python main.py -h```.
+nextvirus can also run by the source code without installation. Firstly, download this repository, then, run nextvirus by `main.py`. The help documentation can be acquired by `python main.py -h`.
 
 
 ## 2. Software dependencies
 
-The running of ```nextvirus``` relies on these softwares:
+The running of `nextvirus` relies on these softwares:
 
 +  [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) (version >=0.39), which is used to remove the contamination from adapter primer.
 
 +  [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) (version >=2.3.5), which is used to remove the contamination from host genome.
-
+  
 +  [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) (version >=2.15.1), in the second sub-pipeline of nextvirus, the Trinity is used to splice reads to contigs.
+  
+<b>Note</b>, the running of Trinity relies on [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml), [jellyfish](https://github.com/gmarcais/Jellyfish/releases), [samtools](https://github.com/samtools/samtools/releases) and [salmon](https://github.com/COMBINE-lab/salmon/releases/tag/v1.10.1), and they can be easily installed,
+```
+sudo apt-get install bowtie2
+
+sudo apt-get install jellyfish
+
+sudo apt install samtools
+
+sudo apt install salmon
+```
 
 +  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads or contigs to viral proteins.
 
@@ -48,7 +59,7 @@ The running of ```nextvirus``` relies on these softwares:
 
 
 ## 3. Configuration of dependent software and database
-In order to manage the path and parameters of dependent softwares convenienty, the ```profiles.xml``` file is used to record their configuration. 
+In order to manage the path and parameters of dependent softwares convenienty, the `profiles.xml` file is used to record their configuration. 
 
 In general, paths and parameters of software only need to be configured once in the first running, except for the host database used to filter contamination of host genome.
 
@@ -66,11 +77,11 @@ the template of profiles.xml is provided in the github repository, please note,
 (1) download the genomic data of host with *.fasta format.
 
 (2) creat the host database using [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) software, for example,
- ```bowtie2-build /home/zzj/host_genome.fna /home/zzj/host_genome```.
+ `bowtie2-build /home/zzj/host_genome.fna /home/zzj/host_genome`.
 
-(3) finally, fill the path ```/home/zzj/host_genome```  into ```<database name="hostdb">``` section of file ```profiles.xml```. 
+(3) finally, fill the path `/home/zzj/host_genome`  into `<database name="hostdb">` section of file `profiles.xml`. 
 
-(4) nextvirus also supports multiplehost databases, please use ```,``` to separate these path, for example ```/home/zzj/host_genome1, /home/zzj/host_genome2```.
+(4) nextvirus also supports multiplehost databases, please use `,` to separate these path, for example `/home/zzj/host_genome1, /home/zzj/host_genome2`.
 
 <b>Tip</b>, different samples may come from different hosts, please adjust them in profiles.xml in time.
 
@@ -78,9 +89,9 @@ the template of profiles.xml is provided in the github repository, please note,
 (1) download the refseq of viral protein (amino acid) from [ncbi refseq database](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
 
 (2) creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond) software, for example, 
-```diamond makedb -p 10 --in /home/zzj/nr/protein.fasta --db /home/zzj/nr/protein.dmnd```. 
+`diamond makedb -p 10 --in /home/zzj/nr/protein.fasta --db /home/zzj/nr/protein.dmnd`. 
 
-(3) finally, fill the path ```/home/zzj/nr/protein.dmnd```  into ```<database name="viral_nr">``` section of file ```profiles.xml```. 
+(3) finally, fill the path `/home/zzj/nr/protein.dmnd`  into `<database name="viral_nr">` section of file `profiles.xml`. 
 
 
 <b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
@@ -93,7 +104,7 @@ The viral taxonomy information is used to classfy viral reads, this repository p
 
 
 ## 4. Getting help
-nextvirus is a command line interface program, users can get help documentation by entering ```nextvirus -h```  or ```nextvirus --help``` .
+nextvirus is a command line interface program, users can get help documentation by entering `nextvirus -h`  or `nextvirus --help` .
 | Parameter | Description |
 | --- | --- |
 |-h, --help | show this help message and exit|
@@ -129,21 +140,21 @@ nextvirus -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 ```
 
 <b> Tip </b>
-+ nextvirus is also supported to run one of ```-r1``` and ```-r2```.
++ nextvirus is also supported to run one of `-r1` and `-r2`.
 
-+ if ```-r2``` is used, the output directory behind ```-o``` have to be <b>absolute path</b>.
++ if `-r2` is used, the output directory behind `-o` have to be <b>absolute path</b>.
 
 + if an error is displayed, please check the input parameters and XML file.
 
 
 ## 6. Output results
-+ file ```input-parameter.txt```, which contains the used parameters of nextvirus in command-line interface.
-+ directory ```pipeline1```, which contains intermediate results and ```finally_result``` from sub-pipeline1.
++ file `input-parameter.txt`, which contains the used parameters of nextvirus in command-line interface.
++ directory `pipeline1`, which contains intermediate results and `finally_result` from sub-pipeline1.
   
 
 
   
-+ directory ```pipeline2```, which contains intermediate results and ```finally_result``` from sub-pipeline2.
++ directory `pipeline2`, which contains intermediate results and `finally_result` from sub-pipeline2.
 
 
 
