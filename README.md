@@ -6,7 +6,7 @@
 
 ## 1. Download and install
 
-nextvirus is developed via ```Python 3```, and you can get and install nextvirus in a variety of ways.
+nextvirus is a command-line-interface program, which developed via ```Python 3```, and you can get and install nextvirus in a variety of ways.
 
 ### 1.1. pip method
 
