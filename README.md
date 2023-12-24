@@ -1,4 +1,4 @@
-# nextvirus: rapid detection and classification of viruses in next-generation sequencing
+# Pan-genome-assisted virus detection (PangeaV): rapid detection and classification of viruses in metagenomics
 
 ![](https://img.shields.io/badge/System-Linux-green.svg)
 ![](https://img.shields.io/pypi/wheel/virusrecom)
