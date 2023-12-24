@@ -1,4 +1,4 @@
-# nextvirus: rapid detection and classification of viruses for next-generation sequencing
+# nextvirus: rapid detection and classification of viruses in next-generation sequencing
 
 ![](https://img.shields.io/badge/System-Linux-green.svg)
 ![](https://img.shields.io/pypi/wheel/virusrecom)
