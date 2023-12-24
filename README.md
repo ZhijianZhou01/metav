@@ -1,6 +1,5 @@
-# Pan-genome-assisted virus detection (PangeaV)
+# Pan-genome-assisted virus detection (PangeaV): rapid detection and classification of viruses in metagenomics sequencing
 
-<b>rapid detection and classification of viruses in metagenomics sequencing</b>
 
 ![](https://img.shields.io/badge/System-Linux-green.svg)
 ![](https://img.shields.io/pypi/wheel/virusrecom)
