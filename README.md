@@ -7,11 +7,11 @@
 ## 1. Introduction
 PangeaV（盘古大陆V） is a command-line-interface program, which is used to rapidly identify and classify viral sequences from metagenomic sequencing data. PangeaV（盘古大陆V） is developed via `Python 3`, and can be used on Linux systems and deployed to the cloud. 
 
-## 1. Download and install
+## 2. Download and install
 
 Users can get and install pangeav in a variety of ways.
 
-### 1.1. pip method
+### 2.1. pip method
 
 pangeav has been distributed to the standard library of `PyPI`, and can be easily installed by the tool `pip`.
 
@@ -20,7 +20,7 @@ pip install pangeav
 pangeav -h
 ```
 
-### 1.2. Or local installation
+### 2.2. Or local installation
 
 In addition to the  `pip` method, you can also install pangeav manually using the file `setup.py`. 
 
@@ -30,12 +30,12 @@ python setup.py install
 pangeav -h
 ```
 
-### 1.3. Or run the source code directly
+### 2.3. Or run the source code directly
 
 pangeav can also run by the source code without installation. Firstly, download this repository, then, run pangeav by `main.py`. The help documentation can be acquired by `python main.py -h`.
 
 
-## 2. Software dependencies
+## 3. Software dependencies
 
 The running of `pangeav` relies on these softwares:
 
@@ -55,8 +55,8 @@ sudo apt install salmon
 
 <b>Note, these softwares need to be installed manually by users in advance and be added to `PATH` (system or user)</b>. 
 
-##  3. Database dependencies
-### 3.1. host database
+##  4. Database dependencies
+### 4.1. host database
 
 The host database is used to remove contamination from host genome. <b>How to prepare a host database?</b>
 
@@ -69,7 +69,7 @@ The host database is used to remove contamination from host genome. <b>How to pr
 
 <b>Tip</b>, different samples may come from different hosts, please adjust them in profiles.xml in time.
 
-### 3.2. viral nr database
+### 4.2. viral nr database
 
 The viral nr database was used to identity viral components from sequenced reads. <b>How to prepare a viral nr database?</b>
 
@@ -80,7 +80,7 @@ The viral nr database was used to identity viral components from sequenced reads
 
 <b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
 
-### 3.3. viral taxonomy information
+### 4.3. viral taxonomy information
 
 The viral taxonomy information is used to classfy viral reads, this repository provides the [taxonomy_information_2021-05-20.txt]() made by ourselves. If you want to add some information, please keep it in the same format. 
 <b>Note</b>, the accession of protein needs to be consistent with viral nr database in the `section 3.2`.
@@ -88,7 +88,7 @@ The viral taxonomy information is used to classfy viral reads, this repository p
 <b>Tip</b>, the viral taxonomy file generally does not need to be replaced in the short term.
 
 
-## 4. Configuration of dependencies
+## 5. Configuration of dependencies
 In order to manage the parameters of dependent softwares and databases convenienty, the `profiles.xml` file is used to record their configuration. 
 
 the template of profiles.xml is provided in the github repository, please note,
@@ -102,7 +102,7 @@ the template of profiles.xml is provided in the github repository, please note,
 <b>Tip</b>, in general, these parameters only need to be configured once in the first running, except for the host database used to filter contamination of host genome.
 
 
-## 5. Getting help
+## 6. Getting help
 Users can view the help documentation by entering `pangeav -h`  or `pangeav --help` .
 | Parameter | Description |
 | --- | --- |
@@ -123,7 +123,7 @@ Users can view the help documentation by entering `pangeav -h`  or `pangeav --he
 |-o OUTDIR | output directory to store all results.|
 
 
-## 6. Example of usage
+## 7. Example of usage
 
 + <b>if reads are from paired-end sequencing:</b>
   
@@ -145,9 +145,9 @@ pangeav -se -u reads.fq -xml profiles.xml -r1 -r2 -t 8 -o outdir
 + if an error is displayed, please check the input parameters and XML file.
 
 
-## 7. Output results
+## 8. Output results
 
-### 7.1. input-parameter.txt
+### 8.1. input-parameter.txt
 
 the output file `input-parameter.txt` recorded the input parameters in command-line interface.
 
@@ -170,7 +170,7 @@ thread:	8
 outdir:	/home/zzj/datas/test/out6
 ```
 
-### 7.2. directory pipeline1
+### 8.2. directory pipeline1
 the directory `pipeline1` contains intermediate results and `finally_result` from `sub-pipeline 1` (reads → viral nr). 
 
 In the example, three thresholds (`1e-6`, `1e-3` and `1e-1`) of e-value are used to filter the output diamond program. Thus, three corresponding sub-directories is created and used to store results. 
@@ -193,7 +193,7 @@ What's more, pangeav counts these hit reads according to `order`, `family` and `
 <b>In particular, pangeav extract all hit reads sequences (*fasta format) according to the hierarchical relationship of `order`, `family` and `strain`(organism)</b>. These hit reads sequences are stored in directory `hit_reads_seq`.
 
 
-### 7.3. directory pipeline2
+### 8.3. directory pipeline2
 the directory `pipeline2` contains intermediate results and `finally_result` from `sub-pipeline 2` (reads → contigs → viral nr). The hierarchy of the directory of output results is the same as directory `pipeline1`.
 
 However, the output in directory `finally_result` of the directory `pipeline2` are hit contigs, not reads.
@@ -210,10 +210,10 @@ In the directory `hit_summary` of each sub-directory with e-value, the sequences
 
 ![https://github.com/ZhijianZhou01/pangeav/blob/main/figure/contigs_symmary.png](https://github.com/ZhijianZhou01/pangeav/blob/main/figure/contigs_symmary.png)
 
-## 8. Apply
+## 9. Apply
 The two sub-pipelines (the prototype of pangeav) are used as the first recognition in our viral detection. In order to reduce false positives and false negatives, in the last three years, we continuously optimize the architecture of pangeav based on subsequent PCR amplification. In our work, pangeav facilitated fast discovery of viruses and save a lot of time.
 
-## 9. Bug report
+## 10. Bug report
 pangeav was test on Ubuntu 16.04 and Ubuntu 20.02, which can work well. If you run into a problem or find a bug, please contact us.
 
 [Github issues](https://github.com/ZhijianZhou01/BioAider/issues) or send email to zjzhou@hnu.edu.cn.
