@@ -5,7 +5,7 @@
 ![](https://img.shields.io/pypi/wheel/virusrecom)
 
 ## 1. Introduction
-PangeaV（盘古大陆V） is a command-line-interface program, which is used to rapidly identify and classify viral sequences from metagenomic sequencing data. PangeaV（盘古大陆V） is developed via `Python 3`, and can be used on Linux systems and deployed to the cloud. 
+PangeaV（盘古大陆V） is a command-line-interface program, which is used to rapidly identify and classify viral sequences from metagenomic sequencing data. PangeaV（盘古大陆V） is developed via `Python 3`, and can be run on Linux systems and deployed to the cloud. 
 
 ## 2. Download and install
 
