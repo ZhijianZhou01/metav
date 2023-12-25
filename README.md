@@ -41,7 +41,7 @@ The running of `pangeav` relies on these softwares:
 
 +  [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) (version >=0.39), which is used to remove the contamination from adapter primer.
 
-+  [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) (version >=2.3.5), which is used to remove the contamination from host genome.
++  [Bowtie2](https://github.com/BenLangmead/bowtie2/releases) (version >=2.3.5), which is used to remove the contamination from host genome.
   
 +  [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) (version >=2.15.1), in the second sub-pipeline of `pangeav`, the Trinity is used to splice reads to contigs. <b>Note</b>, the running of Trinity relies on [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml), [jellyfish](https://github.com/gmarcais/Jellyfish/releases), [samtools](https://github.com/samtools/samtools/releases) and [salmon](https://github.com/COMBINE-lab/salmon/releases/tag/v1.10.1), and they can be easily installed,
 ```
@@ -62,7 +62,7 @@ The host database is used to remove contamination from host genome. <b>How to pr
 
 (1) download the genomic data of host with *.fasta format.
 
-(2) creat the host database using [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml) software, for example,
+(2) creat the host database using [Bowtie2](https://github.com/BenLangmead/bowtie2/releases) software, for example,
  `bowtie2-build /home/zzj/host_genome.fna /home/zzj/host_genome`.
 
 (3) pangeav also supports multiplehost databases, please use `,` to separate these path, for example `/home/zzj/host_genome1, /home/zzj/host_genome2`.
