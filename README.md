@@ -7,7 +7,7 @@
 
 ## 1. Download and install
 
-pangeav is a command-line-interface program, which developed via `Python 3`, and you can get and install pangeav in a variety of ways.
+PangeaV（盘古大陆V） is a command-line-interface program, which developed via `Python 3`, and you can get and install pangeav in a variety of ways.
 
 ### 1.1. pip method
 
