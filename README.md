@@ -109,14 +109,14 @@ Users can view the help documentation by entering `pangeav -h`  or `pangeav --he
 |-h, --help | show this help message and exit|
 |-pe | paired-end sequencing.|
 |-se | single-end sequencing.|
-|-i1 FORWARD | forward reads(*.fq) using paired-end sequencing.|
-|-i2 REVERSE | reverse reads(*.fq) using paired-end sequencing.|
+|-i1 FORWARD | forward reads (*.fq) using paired-end sequencing.|
+|-i2 REVERSE | reverse reads (*.fq) using paired-end sequencing.|
 |-u UNPAIRED | reads file using single-end sequencing (unpaired reads).|
-|-q QUALITIES | the qualities(phred33 or phred64) of sequenced reads, default: phred33.|
+|-q QUALITIES | the qualities (phred33 or phred64) of sequenced reads, default: phred33.|
 |-xml PROFILES | the *.xml file with parameters of dependent software and databases.|
 |-len LENGTH | threshold of length of aa alignment in diamond, default: 10.|
 |-s IDENTITY | threshold of identity(%) of alignment aa in diamond, default: 20.|
-|-e E_VALUE | specify three e-values threshold used to filter the output of diamond, default: 1e-6,1e-3,1e-1.|
+|-e E_VALUE | specify three e-values threshold used to filter the reads (or contigs) hit viral nr database, default: 1e-6,1e-3,1e-1.|
 |-r1 | run the sub-pipeline 1 (reads → viral nr).|
 |-r2 | run the sub-pipeline 2 (reads → contigs → viral nr).|
 |-t THREAD | number of used threads, default: 1.|
