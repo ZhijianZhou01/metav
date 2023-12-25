@@ -53,7 +53,7 @@ sudo apt install salmon
 
 +  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads (or contigs) to viral proteins.
 
-<b>Note, these softwares need to be installed manually by users in advance and be added to `PATH` (system or user)</b>. 
+<b>Note, The four dependencies (Trimmomatic, Bowtie2, Trinity and diamond) need to be installed manually by users in advance and be added to `PATH` (system or user)</b>. 
 
 ##  4. Database dependencies
 ### 4.1. host database
