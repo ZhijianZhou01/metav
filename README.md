@@ -1,11 +1,11 @@
-# Panacea of generally assisting virus detection (PangeaV): rapid detection and classification of viruses in metagenomics sequencing
+# PangeaV（盘古大陆V）: rapid detection and classification of viruses in metagenomics sequencing
 
 
 ![](https://img.shields.io/badge/System-Linux-green.svg)
 ![](https://img.shields.io/pypi/wheel/virusrecom)
 
 ## 1. Introduction
-PangeaV（盘古大陆V） is a command-line-interface program, which is used to rapidly identify and classify viral sequences from metagenomic sequencing data. PangeaV（盘古大陆V） is developed via `Python 3`, and can be run on Linux systems and deployed to the cloud. 
+<b>Pan</b>acea of <b>ge</b>nerally <b>a</b>ssisting <b>v</b>irus detection (PangeaV, 盘古大陆V） is a command-line-interface program, which is used to rapidly identify and classify viral sequences from metagenomic sequencing data. PangeaV（盘古大陆V） is developed via `Python 3`, and can be run on Linux systems and deployed to the cloud. 
 
 ## 2. Download and install
 
