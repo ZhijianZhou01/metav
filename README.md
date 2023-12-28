@@ -1,4 +1,4 @@
-# PangeaV（盘古大陆V）: rapid detection and classification of viruses in metagenomics sequencing
+# PangeaV: rapid detection and classification of viruses in metagenomics sequencing
 
 
 ![](https://img.shields.io/badge/System-Linux-green.svg)
