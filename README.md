@@ -210,10 +210,9 @@ In the directory `hit_summary` of each sub-directory with e-value, the sequences
 
 ![https://github.com/ZhijianZhou01/metav/blob/main/figure/contigs_symmary.png](https://github.com/ZhijianZhou01/metav/blob/main/figure/contigs_symmary.png)
 
-## 9. Apply
-The two sub-pipelines (the prototype of metav) are used as the first recognition in our viral detection. In order to reduce false positives and false negatives, in the last three years, we continuously optimize the architecture of metav based on subsequent PCR amplification. In our work, metav facilitated fast discovery of viruses and save a lot of time.
 
-## 10. Bug report
+
+## 9. Bug report
 metav was test on Ubuntu 16.04 and Ubuntu 20.02, which can work well. If you run into a problem or find a bug, please contact us.
 
 [Github issues](https://github.com/ZhijianZhou01/BioAider/issues) or send email to zjzhou@hnu.edu.cn.
