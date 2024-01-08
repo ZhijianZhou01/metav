@@ -15,6 +15,8 @@ Users can get and install metav in a variety of ways.
 
 metav has been distributed to the standard library of `PyPI`, and can be easily installed by the tool `pip`.
 
+Firstly, download Python3 (https://www.python.org/), and install Python3 and pip, then,
+
 ```
 pip install metav
 metav -h
