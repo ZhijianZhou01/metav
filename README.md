@@ -8,34 +8,7 @@
 MetaV is a command-line-interface program, which is used to rapidly identify and classify viral sequences from metagenomic sequencing data. metav is developed via `Python 3`, and can be run on Linux systems and deployed to the cloud. 
 
 ## 2. Download and install
-
-Users can get and install metav in a variety of ways.
-
-### 2.1. pip method
-
-metav has been distributed to the standard library of `PyPI`, and can be easily installed by the tool `pip`.
-
-Firstly, download `Python3` (https://www.python.org/), and install `Python3` and `pip` tool, then,
-
-```
-pip install metav
-metav -h
-```
-
-### 2.2. Or local installation
-
-In addition to the  `pip` method, you can also install metav manually using the file `setup.py`. 
-
-Firstly, download this repository, then, run:
-```
-python setup.py install
-metav -h
-```
-
-### 2.3. Or run the source code directly
-
-metav can also run by the source code without installation. Firstly, download this repository, then, run metav by `main.py`. The help documentation can be acquired by `python main.py -h`.
-
+metav (linux system):
 
 ## 3. Software dependencies
 
