@@ -40,7 +40,7 @@ Below is an example, please note:
 	</taxonomy>
 
 
-	<!-- the path and parameters of trimmomatic, please adjust the path of merge_adapter.fas -->
+	<!-- the parameters of trimmomatic, please adjust the path of merge_adapter.fas -->
 	<app name="trimmomatic">
 		<parameter>
 		ILLUMINACLIP:/home/zzj/software/bioinfo/trimmomatic/adapters/merge_adapter.fas:2:40:15:8:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:50
@@ -48,7 +48,7 @@ Below is an example, please note:
 	</app>
 
 
-	<!-- the path and parameters of bowtie2 -->
+	<!-- the parameters of bowtie2 -->
 	<app name="bowtie2">
 		<parameter>
 		--very-sensitive --dovetail
@@ -56,7 +56,7 @@ Below is an example, please note:
 	</app>
 
 
-	<!--  the path and key parameters of Trinity -->
+	<!--  the key parameters of Trinity -->
 	<app name="Trinity">
 		<parameter>
 		--max_memory 50G
@@ -64,7 +64,7 @@ Below is an example, please note:
 	</app>
 
 
-	<!--  the path and key parameter of diamond program, note, the e-value is fixed at 1.  -->
+	<!--  the key parameter of diamond program, note, the e-value is fixed at 1.  -->
 	<app name="diamond">
 		<paremeter>
 		--max-target-seqs 1 -b5 -c1
