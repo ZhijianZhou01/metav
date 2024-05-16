@@ -42,7 +42,7 @@ sudo apt install salmon
 <b>Note, The four dependencies (Trimmomatic, Bowtie2, Trinity and diamond) need to be installed manually by users in advance and be added to `PATH` (system or user)</b>. 
 
 ##  4. Database dependencies
-### 4.1. host database
+### 4.1. prepare host database
 
 The host database is used to remove contamination from host genome. <b>How to prepare a host database?</b>
 
@@ -55,7 +55,7 @@ The host database is used to remove contamination from host genome. <b>How to pr
 
 <b>Tip</b>, different samples may come from different hosts, please adjust them in profiles.xml in time.
 
-### 4.2. viral nr database
+### 4.2. prepare viral nr database
 
 The viral nr database was used to identity viral components from sequenced reads. <b>How to prepare a viral nr database?</b>
 
@@ -66,7 +66,7 @@ The viral nr database was used to identity viral components from sequenced reads
 
 <b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
 
-### 4.3. viral taxonomy information
+### 4.3. prepare viral taxonomy information
 
 The viral taxonomy information is used to classfy viral reads, this repository provides the [taxonomy_information_2021-05-20.txt](https://github.com/ZhijianZhou01/metav/releases/download/data/ViralProtein.tgz) made by ourselves. If you want to add some information, please keep it in the same format. 
 <b>Note</b>, the accession of protein needs to be consistent with viral nr database in the `section 4.2`.
@@ -77,13 +77,13 @@ The viral taxonomy information is used to classfy viral reads, this repository p
 ## 5. Configuration of dependencies
 In order to manage the parameters of dependent softwares and databases convenienty, the `profiles.xml` file is used to record their configuration. 
 
-the template of profiles.xml is provided in the github repository, please note,
+the template of `profiles.xml` is provided in the github repository, please note,
 
 + currently version of metav only supports the sequenced data from Illumina platform.
   
-+ the paths of these databases in profiles.xml need to be adjusted with reference to your computer. 
++ the paths of these databases in `profiles.xml` need to be adjusted with reference to your computer. 
   
-+ the parameters of software in profiles.xml generally does not need to be modified because they are suitable in most cases.
++ the parameters of software in `profiles.xml` generally does not need to be modified because they are suitable in most cases.
 
 <b>Tip</b>, in general, these parameters only need to be configured once in the first running, except for the host database used to filter contamination of host genome.
 
