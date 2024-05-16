@@ -59,12 +59,12 @@ The host database is used to remove contamination from host genome. <b>How to pr
 
 The viral nr database was used to identity viral components from sequenced reads. <b>How to prepare a viral nr database?</b>
 
-(1) download the refseq of viral protein (amino acid) from [ncbi refseq database](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
+(1) firstly, download the refseq of viral protein (amino acid) from [ncbi refseq database](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
 
-(2) creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond) software, for example, 
+(2) next, creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond) software, for example, 
 `diamond makedb -p 10 --in /home/zzj/nr/protein.fasta --db /home/zzj/nr/protein.dmnd`. Then, enter the path of file `/home/zzj/nr/protein.dmnd` in the `profiles.xml` file.
 
-(3) making the viral taxonomy information file, which is used to classfy viral reads. This repository provides the [taxonomy_information_2021-05-20.txt](https://github.com/ZhijianZhou01/metav/releases/download/data/ViralProtein.tgz) made by ourselves, in which the accession is consistent with the file `ViralProtein.fasta`. If you want to add some information, please keep it in the same format (four columns).
+(3) then, make the viral taxonomy information file, which is used to classfy viral reads. This repository provides the [taxonomy_information_2021-05-20.txt](https://github.com/ZhijianZhou01/metav/releases/download/data/ViralProtein.tgz) made by ourselves, in which the accession is consistent with the file `ViralProtein.fasta`. If you want to add some information, please keep it in the same format (four columns).
 
 <b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
 
