@@ -51,7 +51,7 @@ The host database is used to remove contamination from host genome. <b>How to pr
 (2) creat the host database using [Bowtie2](https://github.com/BenLangmead/bowtie2/releases) software, for example,
  `bowtie2-build /home/zzj/host_genome.fna /home/zzj/host_genome`.
 
-(3) metav also supports multiplehost databases, please use `,` to separate these path in `profiles.xml` file, for example `/home/zzj/host_genome1, /home/zzj/host_genome2`.
+(3) metav also supports multiplehost databases, please use `,` to separate these path in `profiles.xml` file, for example, `/home/zzj/host_genome1, /home/zzj/host_genome2`.
 
 <b>Tip</b>, different samples may come from different hosts, please adjust them in `profiles.xml` in time.
 
