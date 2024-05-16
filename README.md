@@ -64,14 +64,10 @@ The viral nr database was used to identity viral components from sequenced reads
 (2) creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond) software, for example, 
 `diamond makedb -p 10 --in /home/zzj/nr/protein.fasta --db /home/zzj/nr/protein.dmnd`. Then, enter the path of file `/home/zzj/nr/protein.dmnd` in the `profiles.xml` file.
 
+(3) making the viral taxonomy information file, which is used to classfy viral reads. This repository provides the [taxonomy_information_2021-05-20.txt](https://github.com/ZhijianZhou01/metav/releases/download/data/ViralProtein.tgz) made by ourselves, in which the accession is consistent with the file `ViralProtein.fasta`. If you want to add some information, please keep it in the same format (four columns).
+
 <b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
 
-### 4.3. prepare viral taxonomy information
-
-The viral taxonomy information is used to classfy viral reads, this repository provides the [taxonomy_information_2021-05-20.txt](https://github.com/ZhijianZhou01/metav/releases/download/data/ViralProtein.tgz) made by ourselves. If you want to add some information, please keep it in the same format. Then, enter the path of taxonomy information file in the `profiles.xml`.
-<b>Note</b>, the accession of protein needs to be consistent with viral nr database in the `section 4.2`.
-
-<b>Tip</b>, the viral taxonomy file generally does not need to be replaced in the short term.
 
 
 ## 5. Configuration of dependencies
