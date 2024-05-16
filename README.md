@@ -10,7 +10,16 @@ MetaV is a command-line-interface program, which is used to rapidly identify and
 ![work.png](https://github.com/ZhijianZhou01/metav/blob/main/figure/work.png)
 
 ## 2. Download and install
+### 2.1. pip method
+metav has been distributed to the standard library of PyPI (https://pypi.org/project/metav/), and can be easily installed by the tool ```pip```.
+```
+pip install metav
+metav -h
+```
+
+### 2.2. or running binary file
 The binary file of metav (for linux system) can be downloaded from https://github.com/ZhijianZhou01/metav/releases
+
 
 ## 3. Software dependencies
 
