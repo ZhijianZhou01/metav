@@ -62,7 +62,7 @@ The viral nr database was used to identity viral components from sequenced reads
 (1) download the refseq of viral protein (amino acid) from [ncbi refseq database](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
 
 (2) creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond) software, for example, 
-`diamond makedb -p 10 --in /home/zzj/nr/protein.fasta --db /home/zzj/nr/protein.dmnd`. Then, enter the file-path `/home/zzj/nr/protein.dmnd` in the `profiles.xml` file.
+`diamond makedb -p 10 --in /home/zzj/nr/protein.fasta --db /home/zzj/nr/protein.dmnd`. Then, enter the path of file `/home/zzj/nr/protein.dmnd` in the `profiles.xml` file.
 
 <b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
 
@@ -83,7 +83,7 @@ the template of `profiles.xml` is provided in the github repository, please note
   
 + the paths of these databases in `profiles.xml` need to be adjusted with reference to your computer. 
   
-+ the parameters of software in `profiles.xml` generally does not need to be modified because they are suitable in most cases.
++ the parameters of software in `profiles.xml` generally does not need to be modified because they are suitable in most cases. <b>Note</b>, the path of adapters file (`ILLUMINACLIP:/home/zzj/software/bioinfo/trimmomatic/adapters/merge_adapter.fas` in  setting of trimmomatic program) needs to be modified.
 
 <b>Tip</b>, in general, these parameters only need to be configured once in the first running, except for the host database used to filter contamination of host genome.
 
