@@ -2,7 +2,8 @@
 
 
 ![](https://img.shields.io/badge/System-Linux-green.svg)
-![](https://img.shields.io/pypi/wheel/virusrecom)
+![](https://img.shields.io/pypi/wheel/metav)
+![](https://img.shields.io/pypi/dm/metav)
 
 ## 1. Introduction
 MetaV is a command-line-interface program, which is used to rapidly identify and classify viral sequences from metagenomic sequencing data. metav is developed via `Python 3`, and can be run on Linux systems and deployed to the cloud. 
