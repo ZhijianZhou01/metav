@@ -195,7 +195,7 @@ In the directory `hit_summary` of each sub-directory with e-value, the sequences
 
 
 ## 9. Functional expansion
-metav was originally designed to detect and count the viral composition of metagenomics-sequencing-data, but it's flexible and not limited to viruses.
+metav was originally designed to detect and count the viral composition in metagenomics-sequencing-data, but it's flexible and not limited to viruses.
 
 In fact, the viral nr database can be replaced by protein databases of other pathogenic, for example, bacteria, pathogenic fungi. In a word, metav can detect and count other pathogens of metagenomics-sequencing-data by using the corresponding nr database and taxonomy information file.
 
