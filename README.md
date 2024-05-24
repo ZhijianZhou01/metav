@@ -38,7 +38,7 @@ sudo apt install samtools
 sudo apt install salmon
 ```
 
-+  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads (or contigs) to viral proteins.
++  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads (or contigs) to  proteins.
 
 <b>Note, The four dependencies (Trimmomatic, Bowtie2, Trinity and diamond) need to be installed manually by users in advance and be added to `PATH` (system or user)</b>. 
 
@@ -99,9 +99,9 @@ Users can view the help documentation by entering `metav -h`  or `metav --help` 
 |-xml PROFILES | the *.xml file with parameters of dependent software and databases.|
 |-len LENGTH | threshold of length of aa alignment in diamond, default: 10.|
 |-s IDENTITY | threshold of identity(%) of alignment aa in diamond, default: 20.|
-|-e E_VALUE | specify three e-values threshold used to filter the reads (or contigs) hit viral nr database, default: 1e-6,1e-3,1e-1.|
-|-r1 | run the sub-pipeline 1 (reads → viral nr).|
-|-r2 | run the sub-pipeline 2 (reads → contigs → viral nr).|
+|-e E_VALUE | specify three e-values threshold used to filter the reads (or contigs) hit nr database, default: 1e-6,1e-3,1e-1.|
+|-r1 | run the sub-pipeline 1 (reads → nr database).|
+|-r2 | run the sub-pipeline 2 (reads → contigs → nr database).|
 |-t THREAD | number of used threads, default: 1.|
 |-o OUTDIR | output directory to store all results.|
 
@@ -154,7 +154,7 @@ outdir:	/home/zzj/datas/test/out6
 ```
 
 ### 8.2. directory pipeline1
-the directory `pipeline1` contains intermediate results and `finally_result` from `sub-pipeline 1` (reads → viral nr). 
+the directory `pipeline1` contains intermediate results and `finally_result` from `sub-pipeline 1` (reads → nr database). 
 
 In the example, three thresholds (`1e-6`, `1e-3` and `1e-1`) of e-value are used to filter the output diamond program. Thus, three corresponding sub-directories is created and used to store results. 
 ![https://github.com/ZhijianZhou01/metav/blob/main/figure/e-value.png](https://github.com/ZhijianZhou01/metav/blob/main/figure/e-value.png)
@@ -177,7 +177,7 @@ What's more, metav counts these hit reads according to `order`, `family` and `st
 
 
 ### 8.3. directory pipeline2
-the directory `pipeline2` contains intermediate results and `finally_result` from `sub-pipeline 2` (reads → contigs → viral nr). The hierarchy of the directory of output results is the same as directory `pipeline1`.
+the directory `pipeline2` contains intermediate results and `finally_result` from `sub-pipeline 2` (reads → contigs → nr database). The hierarchy of the directory of output results is the same as directory `pipeline1`.
 
 However, the output in directory `finally_result` of the directory `pipeline2` are hit contigs, not reads.
 
@@ -194,8 +194,13 @@ In the directory `hit_summary` of each sub-directory with e-value, the sequences
 ![https://github.com/ZhijianZhou01/metav/blob/main/figure/contigs_symmary.png](https://github.com/ZhijianZhou01/metav/blob/main/figure/contigs_symmary.png)
 
 
+## 9. Functional expansion
+metav was originally designed to detect and count the viral composition of metagenomics-sequencing-data, but it's flexible and not limited to viruses.
 
-## 9. Bug report
+In fact, the viral nr database can be replaced by protein databases of other pathogenic, for example, bacteria, pathogenic fungi. In a word, metav can detect and count other pathogens of metagenomics-sequencing-data by using the corresponding nr database and taxonomy information file.
+
+
+## 10. Bug report
 metav was test on Ubuntu 16.04 and Ubuntu 20.02, which can work well. If you run into a problem or find a bug, please contact us.
 
 [Github issues](https://github.com/ZhijianZhou01/BioAider/issues) or send email to zjzhou@hnu.edu.cn.
