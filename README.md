@@ -50,22 +50,25 @@ The host database is used to remove contamination from host genome. <b>How to pr
 (1) download the genomic data of host with *.fasta format.
 
 (2) creat the host database using [Bowtie2](https://github.com/BenLangmead/bowtie2/releases) software, for example,
- `bowtie2-build /home/zzj/host_genome.fna /home/zzj/host_genome`.
+ `bowtie2-build /home/zzj/host_db/host_genome.fna /home/zzj/host_db/host_genome`. It then generates six files, which starts with 'host_genome' and suffix are '.1.bt2', '.2.bt2', '.3.bt2', '.4.bt2', '.rev.1.bt2', and '.rev.2.bt2'.
 
-(3) metav also supports multiplehost databases, please use `,` to separate these path in `profiles.xml` file, for example, `/home/zzj/host_genome1, /home/zzj/host_genome2`.
+<b>Next</b>, you need to fill in the path "/home/zzj/host_db/host_genome' into file `profiles.xml`. <b>Note</b>, the path "/home/zzj/host_db/host_genome' is not a directory!
 
-<b>Tip</b>, different samples may come from different hosts, please adjust them in `profiles.xml` in time.
+
+(3) metav also supports multiplehost databases, please use `,` to separate these path in file `profiles.xml`, for example, `/home/zzj/host_db/host_genome1, /home/zzj/host_db/host_genome2`.
+
+<b>Tip</b>, different samples may come from different hosts, please adjust them in file `profiles.xml` in time.
 
 ### 4.2. prepare viral nr database
 
 The viral nr database was used to identity viral components from sequenced reads. <b>How to prepare a viral nr database?</b>
 
-(1) firstly, download the refseq of viral protein (amino acid) from [ncbi refseq database](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/).
+(1) firstly, download the refseqs of viral proteins (amino acid, `*.1.protein.faa.gz`) from [viral database of ncbi refseqs](https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/), besides, please also download `*.protein.gpff.gz` containning the taxonomic information of these sequences. <b>Note</b>, the format of file `*.1.protein.faa.gz` is `fasta`.
 
-(2) next, creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond) software, for example, 
-`diamond makedb -p 10 --in /home/zzj/nr/ViralProtein.fasta --db /home/zzj/nr/ViralProtein.dmnd`. Then, enter the path of file `/home/zzj/nr/ViralProtein.dmnd` in the `profiles.xml` file.
+(2) next, unzip `*.1.protein.faa.gz` and rename to `ViralProtein.fasta`, then creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond) software, for example, 
+`diamond makedb -p 10 --in /home/zzj/nr/ViralProtein.fasta --db /home/zzj/nr/ViralProtein.dmnd`. Then, fill in the path `/home/zzj/nr/ViralProtein.dmnd` into file `profiles.xml`.
 
-(3) then, make the viral taxonomy information file, which is used to classfy viral reads. This repository provides the [taxonomy_information_2021-05-20.txt](https://github.com/ZhijianZhou01/metav/releases/download/data/ViralProtein.tgz) made by ourselves, in which the accession is consistent with the file `ViralProtein.fasta`. If you want to add some information, please keep it in the same format (four columns). Finally, enter the path of viral taxonomy information file in the `profiles.xml`.
+(3) then, extract the viral taxonomy information from file `*.protein.gpff.gz` , which is used to classfy viral reads. This repository provides the [taxonomy_information_2021-05-20.txt](https://github.com/ZhijianZhou01/metav/releases/download/data/ViralProtein.tgz) made by ourselves, in which the accession is consistent with the file `ViralProtein.fasta`. If you want to add some information, please keep it in the same format (four columns, don't change the name of column). Finally, fill in the path of taxonomy information file into the file `profiles.xml`.
 
 <b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
 
