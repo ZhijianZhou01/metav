@@ -81,7 +81,7 @@ the template of `profiles.xml` is provided in the github repository, please note
 
 + currently version of metav only supports the sequenced data from Illumina platform.
   
-+ the paths of these databases in `profiles.xml` need to be adjusted with reference to your computer. 
++ the paths of these databases in `profiles.xml` need to be adjusted with reference to your computer. <b>Note, they have to be absolute path, not relative path.</b>
   
 + the parameters of software in `profiles.xml` generally does not need to be modified because they are suitable in most cases. <b>Note</b>, the path of adapters file needs to be modified, see field `ILLUMINACLIP:/home/zzj/software/bioinfo/trimmomatic/adapters/merge_adapter.fas` in setting of trimmomatic in `profiles.xml`.
 
