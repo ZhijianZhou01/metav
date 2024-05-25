@@ -6,9 +6,15 @@
 ![](https://img.shields.io/pypi/dm/metav)
 
 ## 1. Introduction
-MetaV is a command-line-interface program, which is used to rapidly identify and classify viral sequences from metagenomic sequencing data. metav is developed via `Python 3`, and can be run on Linux systems and deployed to the cloud. 
+### 1.1. workflow of metav
+metav is a command-line-interface program, which is used to rapidly identify and classify viral sequences from metagenomic sequencing data. metav is developed via `Python 3`, and can be run on Linux systems and deployed to the cloud. 
 
 ![work.png](https://github.com/ZhijianZhou01/metav/blob/main/figure/work.png)
+
+### 1.2. Functional expansion
+metav was originally designed to detect and count the viral composition in metagenomics-sequencing-data, but it's flexible and not limited to viruses.
+
+In fact, the viral nr database can be replaced by protein databases of other pathogenic, for example, bacteria, pathogenic fungi. These nr database cam be download from [database of ncbi refseqs](https://ftp.ncbi.nlm.nih.gov/refseq/release/). In a word, metav can detect and count other pathogens of metagenomics-sequencing-data by using the corresponding nr database and taxonomy information file.
 
 ## 2. Download and install
 ### 2.1. pip method
@@ -197,13 +203,7 @@ In the directory `hit_summary` of each sub-directory with e-value, the sequences
 ![https://github.com/ZhijianZhou01/metav/blob/main/figure/contigs_symmary.png](https://github.com/ZhijianZhou01/metav/blob/main/figure/contigs_symmary.png)
 
 
-## 9. Functional expansion
-metav was originally designed to detect and count the viral composition in metagenomics-sequencing-data, but it's flexible and not limited to viruses.
-
-In fact, the viral nr database can be replaced by protein databases of other pathogenic, for example, bacteria, pathogenic fungi. These nr database cam be download from [database of ncbi refseqs](https://ftp.ncbi.nlm.nih.gov/refseq/release/). In a word, metav can detect and count other pathogens of metagenomics-sequencing-data by using the corresponding nr database and taxonomy information file.
-
-
-## 10. Bug report
+## 9. Bug report
 metav was test on Ubuntu 16.04 and Ubuntu 20.02, which can work well. If you run into a problem or find a bug, please contact us.
 
 [Github issues](https://github.com/ZhijianZhou01/BioAider/issues) or send email to zjzhou@hnu.edu.cn.
