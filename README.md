@@ -50,9 +50,9 @@ The host database is used to remove contamination from host genome. <b>How to pr
 (1) download the genomic data of host with *.fasta format.
 
 (2) creat the host database using [Bowtie2](https://github.com/BenLangmead/bowtie2/releases) software, for example,
- `bowtie2-build /home/zzj/host_db/host_genome.fna /home/zzj/host_db/host_genome`. It then generates six files, which starts with 'host_genome' and suffix are '.1.bt2', '.2.bt2', '.3.bt2', '.4.bt2', '.rev.1.bt2', and '.rev.2.bt2'.
+ `bowtie2-build /home/zzj/host_db/host_genome.fna /home/zzj/host_db/host_genome`. It then generates six files, which starts with "host_genome" and suffix are '.1.bt2', '.2.bt2', '.3.bt2', '.4.bt2', '.rev.1.bt2', and '.rev.2.bt2'.
 
-<b>Next</b>, you need to fill in the path "/home/zzj/host_db/host_genome' into file `profiles.xml`. <b>Note</b>, the path "/home/zzj/host_db/host_genome' is not a directory!
+<b>Next</b>, you need to fill in the path `/home/zzj/host_db/host_genome` into file `profiles.xml`. <b>Note</b>, the path `/home/zzj/host_db/host_genome` is not a directory!
 
 
 (3) metav also supports multiplehost databases, please use `,` to separate these path in file `profiles.xml`, for example, `/home/zzj/host_db/host_genome1, /home/zzj/host_db/host_genome2`.
