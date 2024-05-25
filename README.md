@@ -83,7 +83,7 @@ the template of `profiles.xml` is provided in the github repository, please note
   
 + the paths of these databases in file `profiles.xml` need to be adjusted with reference to your computer, databases paths in `profiles.xml` we provided were just some examples. <b>Note, they have to be absolute path, not relative path.</b>
   
-+ the parameters of software in `profiles.xml` generally does not need to be modified because they are suitable in most cases. <b>Note</b>, the path of adapters file needs to be modified, see field `ILLUMINACLIP:/home/zzj/software/bioinfo/trimmomatic/adapters/merge_adapter.fas` in setting of trimmomatic in `profiles.xml`.
++ the parameters of software in `profiles.xml` generally does not need to be modified because they are suitable in most cases. <b>Note</b>, the path of adapters file needs to be modified, see field `ILLUMINACLIP:/home/zzj/software/bioinfo/trimmomatic/adapters/merge_adapter.fas` in setting of trimmomatic in `profiles.xml`. The path `/home/zzj/software/bioinfo/trimmomatic/adapters/merge_adapter.fas` here is only an example, adapter file is generally in the `adapters` folder of the installation directory of trimmomatic software, or you can make this file yourself, just fill in the corresponding path here.
 
 <b>Tip</b>, in general, these parameters only need to be configured once in the first running, except for the host database used to filter contamination of host genome.
 
