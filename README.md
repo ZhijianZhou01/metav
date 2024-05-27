@@ -23,25 +23,25 @@ In fact, the viral nr database can be replaced by protein databases of other pat
 ### 2.1. conda method (recommend)
 metav has been distributed to the `conda` platform (https://anaconda.org/bioconda/metav), and installing uisng conda will automatically resolve software dependencies (including Trimmomatic, Bowtie2, Trinity and diamond). Thus, we recommend installing metav using `conda`.
 ```
-# 1. add bioconda origin
+# (1) add bioconda origin
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
 
-# 2. install metav
-## 2.1. create a separate environment for metav (recommend)
+# (2) install metav
+## (i) create a separate environment for metav (recommend)
 conda create -n metav_env python=3.7  # python >=3.5
 conda activate metav_env
 conda install metav    # or 'conda install bioconda::metav'
 
-## 2.2. or installation without creating separate environment (slow)
+## (ii) or installation without creating separate environment (slow)
 conda install metav  # or 'conda install bioconda::metav'
 
-# 3. view the help documentation
+# (iii) view the help documentation
 metav -h
 ```
 
-### 2.1. pip method
+### 2.2. pip method
 metav has been distributed to the standard library of PyPI (https://pypi.org/project/metav/), and can be easily installed by the tool ```pip```.
 ```
 pip install metav
@@ -49,7 +49,7 @@ metav -h
 ```
 <b>Note, If metav is installed by `pip` tool, you also need to manually install the software dependencies, see section 3.</b>
 
-### 2.2. or using binary file
+### 2.3. or using binary file
 The binary file of metav (for linux system) can be downloaded from https://github.com/ZhijianZhou01/metav/releases. 
 
 <b>Note, If you use the binary file of metav, you also need to manually install the software dependencies, see section 3.</b>
