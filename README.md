@@ -37,7 +37,7 @@ conda install metav    # or 'conda install bioconda::metav'
 ## (ii) or installation without creating separate environment (slow)
 conda install metav  # or 'conda install bioconda::metav'
 
-# (iii) view the help documentation
+# (3) view the help documentation
 metav -h
 ```
 
