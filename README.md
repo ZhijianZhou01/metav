@@ -19,15 +19,40 @@ metav was originally designed to detect and count the viral composition in metag
 In fact, the viral nr database can be replaced by protein databases of other pathogenic, for example, bacteria, pathogenic fungi. These nr database cam be download from [database of ncbi refseqs](https://ftp.ncbi.nlm.nih.gov/refseq/release/). In a word, metav can detect and count other pathogens of metagenomics-sequencing-data by using the corresponding nr database and taxonomy information file.
 
 ## 2. Download and install
+
+### 2.1. conda method (recommend)
+metav has been distributed to the `conda` platform (https://anaconda.org/bioconda/metav), and installing uisng conda will automatically resolve software dependencies (including Trimmomatic, Bowtie2, Trinity and diamond). Thus, we recommend installing metav using `conda`.
+```
+# 1. add bioconda origin
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+
+# 2. install metav
+## 2.1. create a separate environment for metav (recommend)
+conda create -n metav_env python=3.7  # python >=3.5
+conda activate metav_env
+conda install metav    # or 'conda install bioconda::metav'
+
+## 2.2. or installation without creating separate environment (slow)
+conda install metav  # or 'conda install bioconda::metav'
+
+# 3. view the help documentation
+metav -h
+```
+
 ### 2.1. pip method
 metav has been distributed to the standard library of PyPI (https://pypi.org/project/metav/), and can be easily installed by the tool ```pip```.
 ```
 pip install metav
 metav -h
 ```
+<b>Note, If metav is installed by `pip` tool, you also need to manually install the software dependencies, see section 3.</b>
 
-### 2.2. or running binary file
-The binary file of metav (for linux system) can be downloaded from https://github.com/ZhijianZhou01/metav/releases
+### 2.2. or using binary file
+The binary file of metav (for linux system) can be downloaded from https://github.com/ZhijianZhou01/metav/releases. 
+
+<b>Note, If you use the binary file of metav, you also need to manually install the software dependencies, see section 3.</b>
 
 
 ## 3. Software dependencies
@@ -48,7 +73,7 @@ sudo apt install salmon
 
 +  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads (or contigs) to  proteins.
 
-<b>Note, The four dependencies (Trimmomatic, Bowtie2, Trinity and diamond) need to be installed manually by users in advance and be added to `PATH` (system or user)</b>. 
+<b>Note, if metav is installed by `pip` method or using `binary file`, the four dependencies (Trimmomatic, Bowtie2, Trinity and diamond) need to be installed manually by users in advance and be added to `PATH` (system or user)</b>. 
 
 ##  4. Database dependencies
 ### 4.1. prepare host database
