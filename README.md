@@ -41,7 +41,7 @@ conda install metav  # or 'conda install bioconda::metav'
 metav -h
 ```
 
-Besides, the dependent `salmon` software will not be installed properly, and you need:
+Besides, the dependent `salmon` software will not be installed properly, and you need reinstal it.
 ```
 # (1) look at the path of the installed salmon
 which salmon
