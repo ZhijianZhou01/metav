@@ -47,12 +47,12 @@ metav has been distributed to the standard library of PyPI (https://pypi.org/pro
 pip install metav
 metav -h
 ```
-<b>Note, If metav is installed by `pip` tool, you also need to manually install the software dependencies, see section 3.</b>
+<b>Note, if metav is installed by `pip` tool, you also need to manually install the software dependencies, please see section 3.</b>
 
 ### 2.3. or using binary file
 The binary file of metav (for linux system) can be downloaded from https://github.com/ZhijianZhou01/metav/releases. 
 
-<b>Note, If you use the binary file of metav, you also need to manually install the software dependencies, see section 3.</b>
+<b>Note that if you use the metav binary directly, you also need to manually install the software dependencies, please see section 3.</b>
 
 
 ## 3. Software dependencies
