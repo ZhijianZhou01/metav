@@ -41,6 +41,21 @@ conda install metav  # or 'conda install bioconda::metav'
 metav -h
 ```
 
+Besides, the dependent `salmon` software will not be installed properly, and you need:
+```
+# (1) look at the path of the installed salmon
+which salmon
+# such as: /home/zzj/anaconda3/envs/metav_env/bin/salmon
+
+# (2) remove the wrong installation
+rm /home/zzj/anaconda3/envs/metav_env/bin/salmon
+
+# (3) reinstall salmon
+sudo apt install salmon
+```
+
+
+
 ### 2.2. pip method
 metav has been distributed to the standard library of PyPI (https://pypi.org/project/metav/), and can be easily installed by the tool ```pip```.
 ```
