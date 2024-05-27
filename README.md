@@ -39,6 +39,12 @@ conda install metav  # or 'conda install bioconda::metav'
 
 # (iii) view the help documentation
 metav -h
+
+# (iv) check whether the software dependencies is successfully installed (optional)
+which trimmomatic
+which bowtie2
+which Trinity
+which diamond
 ```
 
 ### 2.2. pip method
