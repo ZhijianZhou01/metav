@@ -21,7 +21,7 @@ In fact, the viral nr database can be replaced by protein databases of other pat
 ## 2. Download and install
 
 ### 2.1. conda method (recommend)
-metav has been distributed to the `conda` platform (https://anaconda.org/bioconda/metav), and installing uisng conda will automatically resolve software dependencies (including Trimmomatic, Bowtie2, Trinity and diamond). Thus, we recommend installing metav using `conda`.
+metav has been distributed to the `conda` platform (https://anaconda.org/bioconda/metav), and conda will automatically resolve software dependencies (including Trimmomatic, Bowtie2, Trinity and diamond). Thus, we recommend installing metav using `conda`.
 ```
 # (1) add bioconda origin
 conda config --add channels defaults
