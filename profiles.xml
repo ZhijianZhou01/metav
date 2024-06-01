@@ -43,7 +43,7 @@ Below is an example, please note:
 	<!-- the parameters of trimmomatic, please adjust the path of merge_adapter.fas -->
 	<app name="trimmomatic">
 		<parameter>
-		ILLUMINACLIP:/home/zzj/software/bioinfo/trimmomatic/adapters/merge_adapter.fas:2:40:15:8:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:50
+		ILLUMINACLIP:/home/gxy/anaconda3/envs/metav_env/share/trimmomatic-0.39-2/adapters/merge_adapter.fas:2:40:15:8:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:50
 		</parameter>
 	</app>
 
