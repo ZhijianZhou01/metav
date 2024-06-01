@@ -80,10 +80,22 @@ The running of `metav` relies on these softwares:
   
 +  [Trinity](https://github.com/trinityrnaseq/trinityrnaseq) (version >=2.15.1), in the second sub-pipeline of `metav`, the Trinity is used to splice reads to contigs. <b>Note</b>, the running of Trinity relies on [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml), [jellyfish](https://github.com/gmarcais/Jellyfish/releases), [samtools](https://github.com/samtools/samtools/releases) and [salmon](https://github.com/COMBINE-lab/salmon/releases/), and they can be easily installed,
 ```
-sudo apt-get install bowtie2
+# (1) bowtie2 
+sudo apt-get install c
+
+# (2) jellyfish
 sudo apt-get install jellyfish
-sudo apt install samtools
+
+# (3) salmon
 sudo apt install salmon
+
+# (4) samtools
+wget https://github.com/samtools/samtools/releases/download/1.20/samtools-1.20.tar.bz2
+tar -zxvf samtools-1.20.tar.bz2
+cd samtools-1.20
+./configure
+make
+make install
 ```
 
 +  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads (or contigs) to  proteins.
