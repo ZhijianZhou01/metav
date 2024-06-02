@@ -35,7 +35,7 @@ Below is an example, please note:
 	<!-- the path of information of viral taxonomy.  -->
 	<taxonomy name="viral_taxonomy">
 		<path>
-		/home/zzj/HTS/diamond_data/taxonomy_information_2021-05-20.txt
+		/home/zzj/HTS/diamond_data/taxonomy_information_2024-06-02.txt
 		</path>
 	</taxonomy>
 
