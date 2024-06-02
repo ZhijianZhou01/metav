@@ -128,7 +128,7 @@ The viral nr database was used to identity viral components from sequenced reads
 (2) next, unzip `*.1.protein.faa.gz` and rename to `ViralProtein.fasta`, then creat the viral nr database using [diamond](https://github.com/bbuchfink/diamond) software, for example, 
 `diamond makedb -p 10 --in /home/zzj/nr/ViralProtein.fasta --db /home/zzj/nr/ViralProtein.dmnd`. Then, fill in the path `/home/zzj/nr/ViralProtein.dmnd` into file `profiles.xml`.
 
-(3) then, extract the viral taxonomy information from file `*.protein.gpff.gz` , which is used to classfy viral reads. This repository provides the [taxonomy_information_2021-05-20.txt](https://github.com/ZhijianZhou01/metav/releases/download/data/ViralProtein.tgz) made by ourselves, in which the accession is consistent with the file `ViralProtein.fasta`. If you want to add some information, please keep it in the same format (four columns, don't change the name of column). Finally, fill in the path of taxonomy information file into the file `profiles.xml`.
+(3) then, extract the viral taxonomy information from file `*.protein.gpff.gz` , which is used to classfy viral reads. This repository provides the [taxonomy_information](https://github.com/ZhijianZhou01/metav/releases/download/data) made by ourselves, in which the accession is consistent with the file `ViralProtein.fasta`. If you want to add some information, please keep it in the same format (four columns, don't change the name of column). Finally, fill in the path of taxonomy information file into the file `profiles.xml`.
 
 <b>Tip</b>, the viral nr database generally does not need to be replaced in the short term.
 
