@@ -262,7 +262,7 @@ In the directory `hit_summary` of each sub-directory with e-value, the sequences
 
 
 ## 9. Application
-metav has contributed to the discovery of many pathogens, some of which have been published.
+metav has contributed to the discovery of many new pathogens, some of which have been published.
 
 + Chu KK, Zhou ZJ, Wang Q, Ye SB, Guo L, Qiu Y, Zhang YZ, Ge XY. Characterization of Deltacoronavirus in Black-Headed Gulls (Chroicocephalus ridibundus) in South China Indicating Frequent Interspecies Transmission of the Virus in Birds. <i>Front Microbiol</i>. 2022 May 12;13:895741. [doi: 10.3389/fmicb.2022.895741](https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2022.895741/full).
 
