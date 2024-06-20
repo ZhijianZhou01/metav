@@ -11,7 +11,10 @@ metav is a command-line-interface program, which is used to rapidly identify and
 
 The workflow is as follows,
 
-![work.png](https://github.com/ZhijianZhou01/metav/blob/main/figure/work.png)
+<div  align="left">    
+<kbd><img src="https://github.com/ZhijianZhou01/metav/blob/main/figure/metav.jpg" width = "532" height = "552" alt="work" align=left /></kbd>
+</div>
+
 
 ### 1.2. Functional expansion
 metav was originally designed to detect and count the viral composition in metagenomics-sequencing-data, but it's flexible and not limited to viruses.
