@@ -271,7 +271,11 @@ metav has contributed to the discovery of many new pathogens, some of which have
 + Yu XW, Wang Q, Liu L, Zhou ZJ, Cai T, Yuan HM, Tang MA, Peng J, Ye SB, Yang XH, Deng XB, Ge XY. Detection and Genomic Characterization of Torque Teno Virus in Pneumoconiosis Patients in China. <i>Viruses</i>. 2024; 16(7):1059. [https://doi.org/10.3390/v16071059](https://www.mdpi.com/1999-4915/16/7/1059).
 
 
-## 10. Bug report
+## 10. Cite
+
+For example, the vrial (or other pathogens) reads/components was identified by metav pipeline (https://github.com/ZhijianZhou01/metav).
+
+## 11. Bug report
 metav was test on Ubuntu 16.04 and Ubuntu 20.02, which can work well. If you run into a problem or find a bug, please contact us.
 
 [Github issues](https://github.com/ZhijianZhou01/BioAider/issues) or send email to zjzhou@hnu.edu.cn.
