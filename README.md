@@ -264,9 +264,11 @@ In the directory `hit_summary` of each sub-directory with e-value, the sequences
 ## 9. Application
 metav has contributed to the discovery of many new pathogens, some of which have been published.
 
-+ Chu KK, Zhou ZJ, Wang Q, Ye SB, Guo L, Qiu Y, Zhang YZ, Ge XY. Characterization of Deltacoronavirus in Black-Headed Gulls (Chroicocephalus ridibundus) in South China Indicating Frequent Interspecies Transmission of the Virus in Birds. <i>Front Microbiol</i>. 2022 May 12;13:895741. [doi: 10.3389/fmicb.2022.895741](https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2022.895741/full).
++ Chu KK, Zhou ZJ, Wang Q, Ye SB, Guo L, Qiu Y, Zhang YZ, Ge XY. Characterization of Deltacoronavirus in Black-Headed Gulls (Chroicocephalus ridibundus) in South China Indicating Frequent Interspecies Transmission of the Virus in Birds. <i>Front Microbiol</i>. 2022 May 12;13:895741. [https://doi.org/10.3389/fmicb.2022.895741](https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2022.895741/full).
 
-+ Shi Y, Tang H, Zhou ZJ, Liao JY, Ge XY, Xiao CT. First detection of Tetraparvovirus ungulate 1 in diseased cattle (Chinese Simmental) from Hunan province, China. <i>Virol J</i>. 2024. Jun 6;21(1):132. [doi: 10.1186/s12985-024-02402-1](https://virologyj.biomedcentral.com/articles/10.1186/s12985-024-02402-1).
++ Shi Y, Tang H, Zhou ZJ, Liao JY, Ge XY, Xiao CT. First detection of Tetraparvovirus ungulate 1 in diseased cattle (Chinese Simmental) from Hunan province, China. <i>Virol J</i>. 2024. Jun 6;21(1):132. [https://doi.org/10.1186/s12985-024-02402-1](https://virologyj.biomedcentral.com/articles/10.1186/s12985-024-02402-1).
+
++ Yu XW, Wang Q, Liu L, Zhou ZJ, Cai T, Yuan HM, Tang MA, Peng J, Ye SB, Yang XH, et al. Detection and Genomic Characterization of Torque Teno Virus in Pneumoconiosis Patients in China. <i>Viruses</i>. 2024; 16(7):1059. [https://doi.org/10.3390/v16071059](https://www.mdpi.com/1999-4915/16/7/1059).
 
 
 ## 10. Bug report
