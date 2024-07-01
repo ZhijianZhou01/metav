@@ -273,7 +273,7 @@ metav has contributed to the discovery of many new pathogens, some of which have
 
 ## 10. Cite
 
-For example, the vrial (or other pathogens) reads/components was identified by metav pipeline (https://github.com/ZhijianZhou01/metav).
+For example, the vrial (or other pathogens) reads/components were identified by metav pipeline (https://github.com/ZhijianZhou01/metav).
 
 ## 11. Bug report
 metav was test on Ubuntu 16.04 and Ubuntu 20.02, which can work well. If you run into a problem or find a bug, please contact us.
