@@ -142,7 +142,7 @@ In order to manage the parameters of dependent softwares and databases convenien
 
 the template of `profiles.xml` is provided in the github repository, please note,
 
-+ currently version of metav only supports the sequenced data from Illumina platform.
++ <b>currently version of metav only supports the sequenced data from `second-generation sequencing`</b>.
   
 + the paths of these databases in file `profiles.xml` need to be adjusted with reference to your computer, databases paths in `profiles.xml` we provided were just some examples. <b>Note, they have to be absolute path, not relative path.</b>
   
