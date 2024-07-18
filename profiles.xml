@@ -3,11 +3,11 @@
 
 <!--
 
-the running of nextvirus depends on the following software (app) and databases, and you need to prepare them in advance on your computer.
+metav depends on the following software and databases, and you need to prepare them in advance on your computer.
 In general, these parameters only need to be configured once in the first running, except for the host database used to filter contamination.
 
 Below is an example, please note:
-(1) currently version of nextvirus only supports the sequencing data from Illumina platform.
+(1) currently version of metav only supports the sequenced data from second-generation sequencing.
 (2) the paths of these databases in this *.xml need to be adjusted with reference to your computer.
 (3) generally, the parameters of software in this *.xml file does not need to be modified because they are suitable in most cases.
 
