@@ -40,9 +40,16 @@ conda install metav    # or 'conda install bioconda::metav'
 ## (ii) or installation without creating separate environment (slow)
 conda install metav  # or 'conda install bioconda::metav'
 
-# (3) view the help documentation
+# (3) Modify the maximum java memory for trimmomatic
+Note, the default value(1Gb) is not recommended, a lower value will prevent reads from being output properly.
+For example, open the file "/home/zzj/anaconda3/envs/metav_env/share/trimmomatic-0.39-2/trimmomatic", use maximum memory of 20Gb and modify 'default_jvm_mem_opts = ['-Xms512m', '-Xmx1g']'  → 'default_jvm_mem_opts = ['-Xms512m', '-Xmx20g']'
+
+# (4) view the help documentation
 metav -h
+
 ```
+
+
 
 <b>Note: </b> the dependent `salmon` software will not be installed properly by conda, and you need reinstall it.
 ```
@@ -77,7 +84,8 @@ The binary file of metav (for linux system) can be downloaded from https://githu
 
 The running of `metav` relies on these softwares:
 
-+  [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) (version >=0.39), which is used to remove the contamination from adapter primer.
++  [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) (version >=0.39), which is used to remove the contamination from adapter primer. Note, the default value(1Gb) is not recommended, a lower value will prevent reads from being output properly.
+For example, open the file `/home/zzj/anaconda3/envs/metav_env/share/trimmomatic-0.39-2/trimmomatic`, use maximum memory of 20Gb and modify `default_jvm_mem_opts = ['-Xms512m', '-Xmx1g']`  → `default_jvm_mem_opts = ['-Xms512m', '-Xmx20g']`
 
 +  [Bowtie2](https://github.com/BenLangmead/bowtie2/releases) (version >=2.3.0), which is used to remove the contamination from host genome.
   
