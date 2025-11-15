@@ -269,7 +269,8 @@ In the directory `hit_summary` of each sub-directory with e-value, the sequences
 ![https://github.com/ZhijianZhou01/metav/blob/main/figure/contigs_symmary.png](https://github.com/ZhijianZhou01/metav/blob/main/figure/contigs_symmary.png)
 
 ### 8.4. Important Notes
-Metav is not an entirely new method for virus identification. As a pipeline that calls existing software, it aims to reduce the complexity of switching between tools. During the BLAST process, it is difficult to avoid false positives, especially with reads. Therefore, the output of Metav requires further scrutiny. For instance, setting stricter e-values for BLAST or applying additional filters based on the number of hit reads in the output can help reduce false positives.
+metav is not an entirely new method for virus identification. As a pipeline that calls existing software, it aims to reduce the complexity of switching between tools. The identification results from metav are preliminary. During the BLAST step, it is difficult to avoid false positives hits, especially with reads. Therefore, the final output of metav requires further evaluation. For instance, applying additional filters based on the number of hit reads in the output can help reduce false positives. Additionally, a more stringent e-value threshold can be set for BLAST.
+
 
 ## 9. Bug report
 metav was test on Ubuntu 16.04 and Ubuntu 20.02, which can work well. If you run into a problem or find a bug, please contact us.
