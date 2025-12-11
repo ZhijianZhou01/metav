@@ -15,10 +15,6 @@ The workflow of metav is simple but efficientas,
 <kbd><img src="https://github.com/ZhijianZhou01/metav/blob/main/V1/figure/metav.jpg" width = "532" height = "552" alt="work" align=left /></kbd>
 </div>
 
-
-### 1.2. Functional expansion
-metav was originally designed to detect the viral composition in metagenomics-sequencing-data, but it's flexible and not limited to viruses.
-
 ## 2. Download and install
 
 ### 2.1. conda method (recommend)
