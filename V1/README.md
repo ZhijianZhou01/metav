@@ -17,7 +17,7 @@ The workflow of metav is simple but efficientas,
 
 
 ### 1.2. Functional expansion
-metav was originally designed to detect and count the viral composition in metagenomics-sequencing-data, but it's flexible and not limited to viruses.
+metav was originally designed to detect the viral composition in metagenomics-sequencing-data, but it's flexible and not limited to viruses.
 
 ## 2. Download and install
 
