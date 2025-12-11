@@ -12,7 +12,7 @@ metav is a command-line-interface program, which is used to rapidly identify and
 The workflow of metav is simple but efficientas,
 
 <div  align="left">    
-<kbd><img src="https://github.com/ZhijianZhou01/metav/blob/main/figure/metav.jpg" width = "532" height = "552" alt="work" align=left /></kbd>
+<kbd><img src="https://github.com/ZhijianZhou01/metav/blob/main/V1/figure/metav.jpg" width = "532" height = "552" alt="work" align=left /></kbd>
 </div>
 
 
@@ -104,7 +104,7 @@ sudo apt install salmon
 wget https://github.com/samtools/samtools/releases/download/1.20/samtools-1.20.tar.bz2
 tar -zxvf samtools-1.20.tar.bz2
 cd samtools-1.20
-./configure
+./conV1/figure
 make
 make install
 ```
@@ -157,7 +157,7 @@ the template of `profiles.xml` is provided in the github repository, please note
 + the parameters of software in `profiles.xml` generally does not need to be modified because they are suitable in most cases.
 <b>But, note, the path of adapters file needs to be modified</b>, see field `ILLUMINACLIP:/home/zzj/anaconda3/envs/metav_env/share/trimmomatic-0.39-2/adapters/merge_adapter.fas` in setting of trimmomatic in `profiles.xml`. The path `/home/zzj/anaconda3/envs/metav_env/share/trimmomatic-0.39-2/adapters/merge_adapter.fas` here is only an example, adapter file is generally in the `adapters` folder of the installation directory of trimmomatic software, or you can make this file yourself, just fill in the corresponding absolute path here.
 
-<b>Tip</b>, in general, these parameters only need to be configured once in the first running, except for the host database used to filter contamination of host genome.
+<b>Tip</b>, in general, these parameters only need to be conV1/figured once in the first running, except for the host database used to filter contamination of host genome.
 
 
 ## 6. Getting help
@@ -232,7 +232,7 @@ outdir:	/home/zzj/datas/test/out6
 the directory `pipeline1` contains intermediate results and `finally_result` from `sub-pipeline 1` (reads → nr database). 
 
 In the example, three thresholds (`1e-6`, `1e-3` and `1e-1`) of e-value are used to filter the output diamond program. Thus, three corresponding sub-directories is created and used to store results. 
-![https://github.com/ZhijianZhou01/metav/blob/main/figure/e-value.png](https://github.com/ZhijianZhou01/metav/blob/main/figure/e-value.png)
+![https://github.com/ZhijianZhou01/metav/blob/main/V1/figure/e-value.png](https://github.com/ZhijianZhou01/metav/blob/main/V1/figure/e-value.png)
 
 The meanings of directory name with e-value in `pipeline1` are as follows,
 
@@ -246,7 +246,7 @@ The hierarchy is same in all three sub-directories with e-value. For example, in
 
 What's more, metav counts these hit reads according to `order`, `family` and `strain`(organism) and provides three `*.csv` summary files.
 
-![https://github.com/ZhijianZhou01/metav/blob/main/figure/reads_summary.png](https://github.com/ZhijianZhou01/metav/blob/main/figure/reads_summary.png)
+![https://github.com/ZhijianZhou01/metav/blob/main/V1/figure/reads_summary.png](https://github.com/ZhijianZhou01/metav/blob/main/V1/figure/reads_summary.png)
 
 <b>In particular, metav extract all hit reads sequences (*fasta format) according to the hierarchical relationship of `order`, `family` and `strain`(organism)</b>. These hit reads sequences are stored in directory `hit_reads_seq`.
 
@@ -266,7 +266,7 @@ The meanings of directory name with e-value in `pipeline2` are as follows,
 
 In the directory `hit_summary` of each sub-directory with e-value, the sequences and summary information of hit contigs are provided, and these hit contigs sequences are stored in directory `hit_contigs_seq`.
 
-![https://github.com/ZhijianZhou01/metav/blob/main/figure/contigs_symmary.png](https://github.com/ZhijianZhou01/metav/blob/main/figure/contigs_symmary.png)
+![https://github.com/ZhijianZhou01/metav/blob/main/V1/figure/contigs_symmary.png](https://github.com/ZhijianZhou01/metav/blob/main/V1/figure/contigs_symmary.png)
 
 ### 8.4. Important Notes
 metav is not an entirely new method for virus identification. As a pipeline that calls existing software, it aims to reduce the complexity of switching between tools. The identification results from metav are preliminary. During the BLAST step, it is difficult to avoid false positives hits, especially with reads. Therefore, the final output of metav requires further evaluation. For instance, applying additional filters based on the number of hit reads or performing alignment against reference genomes can help reduce false positives. Additionally, a more stringent e-value threshold can be set for BLAST.
