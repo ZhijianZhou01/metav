@@ -6,7 +6,7 @@
 ![](https://img.shields.io/pypi/dm/metav)
 
 ## 1. Introduction
-### 1.1. workflow of metav 1.x
+### 1.1. workflow of MetaV v1.x
 metav is a command-line-interface program, which is used to rapidly identify and classify viral sequences from metagenomic sequencing data. metav is developed via `Python 3`, and can be run on Linux systems and deployed to the cloud. 
 
 The workflow of metav is simple but efficientas,
