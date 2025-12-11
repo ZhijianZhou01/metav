@@ -19,8 +19,6 @@ The workflow of metav is simple but efficientas,
 ### 1.2. Functional expansion
 metav was originally designed to detect and count the viral composition in metagenomics-sequencing-data, but it's flexible and not limited to viruses.
 
-In fact, the viral nr database can be replaced by protein databases of other pathogenic, for example, bacteria, pathogenic fungi. These nr database cam be download from [database of ncbi refseqs](https://ftp.ncbi.nlm.nih.gov/refseq/release/). In a word, metav can detect and count other pathogens of metagenomics-sequencing-data by using the corresponding nr database and taxonomy information file.
-
 ## 2. Download and install
 
 ### 2.1. conda method (recommend)
