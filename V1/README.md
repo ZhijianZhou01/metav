@@ -59,7 +59,6 @@ sudo apt install salmon
 ```
 
 
-
 ### 2.2. pip method
 metav has been distributed to the standard library of PyPI (https://pypi.org/project/metav/), and can be easily installed by the tool ```pip```.
 ```
@@ -67,11 +66,6 @@ pip install metav
 metav -h
 ```
 <b>Note, if metav is installed by `pip` tool, you also need to manually install the software dependencies, please see section 3.</b>
-
-### 2.3. or using binary file
-The binary file of metav (for linux system) can be downloaded from https://github.com/ZhijianZhou01/metav/releases. 
-
-<b>Note that if you use the metav binary directly, you also need to manually install the software dependencies, please see section 3.</b>
 
 
 ## 3. Software dependencies
@@ -105,7 +99,6 @@ make install
 
 +  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads (or contigs) to  proteins.
 
-<b>Note, if metav is installed by `pip` method or using `binary file`, the four dependencies (Trimmomatic, Bowtie2, Trinity and diamond) need to be installed manually by users in advance and be added to `PATH` (system or user)</b>. 
 
 ##  4. Database dependencies
 ### 4.1. prepare host database
