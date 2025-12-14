@@ -52,11 +52,6 @@ metav -h
 ```
 <b>Note, if metav is installed by `pip` tool, you also need to manually install the software dependencies, please see section 3.</b>
 
-### 2.3. or using binary file
-The binary file of metav (for linux system) can be downloaded from https://github.com/ZhijianZhou01/metav/releases. 
-
-<b>Note that if you use the metav binary directly, you also need to manually install the software dependencies, please see section 3.</b>
-
 
 ## 3. Software dependencies
 
