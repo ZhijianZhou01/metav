@@ -66,7 +66,6 @@ For example, open the file `/home/zzj/anaconda3/envs/metav_env/share/trimmomatic
 
 +  [diamond](https://github.com/bbuchfink/diamond) (version >=2.0.9), the diamond is used to map reads (or contigs) to  proteins.
 
-<b>Note, if metav is installed by `pip` method or using `binary file`, the four dependencies (Trimmomatic, Bowtie2, megahit and diamond) need to be installed manually by users in advance and be added to `PATH` (system or user)</b>. 
 
 ##  4. Database dependencies
 ### 4.1. prepare host database
