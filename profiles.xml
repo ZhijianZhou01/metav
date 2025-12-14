@@ -1,0 +1,119 @@
+<?xml version="1.0" standalone="yes"?>
+
+
+<!--
+
+metav depends on the following software and databases, and you need to prepare them in advance on your computer.
+In general, these parameters only need to be configured once in the first running, except for the host database used to filter contamination.
+
+Below is an example, please note:
+(1) currently version of metav only supports the sequenced data from second-generation sequencing.
+(2) the paths of these databases in this *.xml need to be adjusted with reference to your computer.
+(3) generally, the parameters of software in this *.xml file does not need to be modified because they are suitable in most cases.
+
+-->
+ 
+
+<dependencies>
+
+	<!-- the path of host database which was created in advance by bowtie2-build program, and usually needs to be adjusted. -->
+	<!-- for example: bowtie2-build -p 20 /path/Human_Gallus_gallus.fas /path/Human_Gallus_gallus -->
+	<database name="hostdb">
+		<path>
+		/home/zzj/database/human_genome/human
+		</path>
+	</database>
+
+
+	<!-- the path of plasmid database, which was created in advance by bowtie2-build program. -->
+	<!-- for example: bowtie2-build -p 20 /path/plasmid.fna /path/plasmid -->
+	<database name="plasmid">
+		<path>
+		/home/zzj/database/plasmids/combined_plasmids
+		</path>
+	</database>
+
+
+	<!-- the path of viral nr database (*.dmnd), which was created in advance by diamond program. -->
+	<database name="viral_nr">
+		<path>
+		/home/zzj/database/viral_nr/ViralProtein.dmnd
+		</path>
+	</database>
+
+	<!-- the path of information of viral taxonomy.  -->
+	<taxonomy name="viral_taxonomy">
+		<path>
+		/home/zzj/database/viral_nr/taxonomy_information-2025-10-13.txt
+		</path>
+	</taxonomy>
+
+
+	<!-- the path of nr database (*.dmnd) with taxid, which was created in advance by diamond program. -->
+	<database name="nr_taxid">
+		<path>
+		/home/zzj/database/nr/nr_taxid.dmnd
+		</path>
+	</database>
+	
+
+	<!-- the path of information of viral taxonomy.  -->
+	<taxonomy name="nr_taxid_viruses">
+		<path>
+		/home/zzj/database/nr/virus_taxids.txt
+		</path>
+	</taxonomy>
+
+
+	<!-- the parameters of trimmomatic, please adjust the path of merge_adapter.fas -->
+	<app name="trimmomatic">
+		<parameter>
+		ILLUMINACLIP:/home/zzj/anaconda3/envs/metav_env/share/trimmomatic-0.40-0/adapters/adapter_combined.fa:2:40:15:8:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:50
+		</parameter>
+	</app>
+
+
+	<!-- the parameters of bowtie2 for host database-->
+	<app name="bowtie2_host">
+		<parameter>
+		--very-sensitive --dovetail
+		</parameter>
+	</app>
+
+	<!-- the parameters of bowtie2 for plasmid database-->
+	<app name="bowtie2_plasmid">
+		<parameter>
+		--very-sensitive --dovetail
+		</parameter>
+	</app>
+
+	<!-- the parameters of megahit-->
+	<app name="megahit">
+		<parameter>
+		--memory 0.8 --min-contig-len 200
+		</parameter>
+	</app>
+
+
+	<!--  the key parameter of diamond program in viral nr database, note, the max-target-seqs is fixed at 1.  -->
+	<app name="diamond_viral_nr">
+		<paremeter>
+		-e 0.1 -b5 -c1
+		</paremeter>
+	</app>
+	
+
+	<!--  the key parameter of diamond program in nr database, note, the max-target-seqs is fixed at 1.-->
+	<app name="diamond_nr">
+		<paremeter>
+		-e 0.1 -b5 -c1
+		</paremeter>
+	</app>
+
+
+</dependencies>
+
+<!--  note, these software and databases dependencies needs to be prepared manually in advance, and these softwares need to be added to PATH (system or user).  -->
+
+
+
