@@ -263,10 +263,11 @@ In the directory `hit_summary` of each sub-directory with e-value, the sequences
 ![https://github.com/ZhijianZhou01/metav/blob/main/V1/figure/contigs_symmary.png](https://github.com/ZhijianZhou01/metav/blob/main/V1/figure/contigs_symmary.png)
 
 ### 8.4. Important Notes
-As a pipeline that calls existing software, metav aims to reduce the complexity of switching between tools. The identification results from metav are preliminary. During the BLAST step, it is difficult to avoid false positives hits, especially with reads. Therefore, the final output of metav requires further evaluation. For instance, applying additional filters based on the number of hit reads or performing alignment against reference genomes can help reduce false positives. Additionally, a more stringent e-value threshold can be set for BLAST.
++ As a pipeline that calls existing software, metav aims to reduce the complexity of switching between tools. The identification results from metav are preliminary. During the BLAST step, it is difficult to avoid false positives hits, especially with reads. Therefore, the final output of metav requires further evaluation. For instance, applying additional filters based on the number of hit reads or performing alignment against reference genomes can help reduce false positives. Additionally, a more stringent e-value threshold can be set for BLAST.
 
++ Not applicable to metatranscriptomic sequencing data.
 
 ## 9. Bug report
 metav was test on Ubuntu 16.04 and Ubuntu 20.02, which can work well. If you run into a problem or find a bug, please contact us.
 
-[Github issues](https://github.com/ZhijianZhou01/BioAider/issues) or send email to zjzhou@hnu.edu.cn.
+[Github issues](https://github.com/ZhijianZhou01/metav/issues) or send email to zjzhou@hnu.edu.cn.
