@@ -1,4 +1,4 @@
-# Metagenomics virus detection (MetaV): rapid detection and classification of viruses in metagenomics sequencing
+<img width="999" height="88" alt="image" src="https://github.com/user-attachments/assets/d7caa95a-22cc-439f-ab47-6b174a56d03b" /># Metagenomics virus detection (MetaV): rapid detection and classification of viruses in metagenomics sequencing
 
 
 ![](https://img.shields.io/badge/System-Linux-green.svg)
@@ -253,7 +253,8 @@ In the directory `hit_summary` of each sub-directory with e-value, the sequences
 
 
 ### 9. Important Notes
-As a pipeline that calls existing software, metav aims to reduce the complexity of switching between tools. During the blast step, it is difficult to avoid false positives hits, especially with reads. Therefore, the final output of metav requires further evaluation. For instance, applying additional filters based on the number of hit reads or performing alignment against reference genomes can help reduce false positives. Additionally, a more stringent e-value threshold can be set for blast, but it is also important to balance the risk of false negatives..
++ As a pipeline that calls existing software, metav aims to reduce the complexity of switching between tools. During the blast step, it is difficult to avoid false positives hits, especially with reads. Therefore, the final output of metav requires further evaluation. For instance, applying additional filters based on the number of hit reads or performing alignment against reference genomes can help reduce false positives. Additionally, a more stringent e-value threshold can be set for blast, but it is also important to balance the risk of false negatives.
++ <b>Not applicable to metatranscriptomic sequencing data.</b>
 
 
 ## 10. Bug report
