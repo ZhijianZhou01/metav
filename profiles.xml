@@ -76,7 +76,7 @@ Below is an example, please note:
 	<!-- the parameters of bowtie2 for host database-->
 	<app name="bowtie2_host">
 		<parameter>
-		--very-sensitive --dovetail
+		--fast-local
 		</parameter>
 	</app>
 
@@ -114,6 +114,7 @@ Below is an example, please note:
 </dependencies>
 
 <!--  note, these software and databases dependencies needs to be prepared manually in advance, and these softwares need to be added to PATH (system or user).  -->
+
 
 
 
